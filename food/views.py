@@ -6,3 +6,8 @@ def index(request):
     return render(request, "food/index.html")
 
 
+def pie(request):
+    return HttpResponse("hetoodojdjdjd")
+
+
+
