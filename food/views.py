@@ -3,11 +3,12 @@ from django.http import HttpResponse
 
 
 def index(request):
-    return render(request, "food/index.html")
+    ctx = {'name': 'OBLIVIOUS RESTAURANT'}
+    return render(request, "food/index.html", ctx)
 
 
 def pie(request):
-    return HttpResponse("hetoodojdjdjd")
+    return render(request, "food/pie.html")
 
 
 
