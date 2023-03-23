@@ -17,10 +17,12 @@ from django.contrib import admin
 from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
-from food.views import index
+from food.views import index, pie
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', index, name="index"),
-    path('food/', include('food.urls', namespace='food')),
+    path('pie.html', pie, name='pie_page'),
+    # path('cakes.html', cakes, name='cake_page'),
+    
 ]

@@ -8,7 +8,10 @@ def index(request):
 
 
 def pie(request):
+    ctx = {'name': 'OBLIVIOUS BAKERY'}
     return render(request, "food/pie.html")
+
+
 
 
 
