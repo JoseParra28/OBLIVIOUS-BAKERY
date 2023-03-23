@@ -1,5 +1,5 @@
-/* ----------------------------------------------Header, logo and nav bar */
-nav{
+  /* ----------------------------------------------Header, logo and nav bar */
+  nav{
     display: flex;
     width: 100%;
     justify-content: space-around;

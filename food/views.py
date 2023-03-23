@@ -3,7 +3,7 @@ from django.http import HttpResponse
 
 
 def index(request):
-    ctx = {'name': 'OBLIVIOUS RESTAURANT'}
+    ctx = {'name': 'OBLIVIOUS BAKERY'}
     return render(request, "food/index.html", ctx)
 
 
