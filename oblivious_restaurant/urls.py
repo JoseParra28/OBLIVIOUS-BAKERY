@@ -21,8 +21,8 @@ from food.views import index, pie
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', index, name="index"),
+    path('', index, name="index_page"),
     path('pie.html', pie, name='pie_page'),
-    # path('cakes.html', cakes, name='cake_page'),
+    path('index.html', index, name="index"),
     
 ]
