@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Pie
+from .models import Pie, Cake
 
 
 class Pie_admin(admin.ModelAdmin):
@@ -7,3 +7,4 @@ class Pie_admin(admin.ModelAdmin):
 
 
 admin.site.register(Pie, Pie_admin)
+admin.site.register(Cake, Pie_admin)
