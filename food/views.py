@@ -12,6 +12,9 @@ def pie(request):
     return render(request, "food/pie.html")
 
 
+def cakes(request):
+    return render(request, "food/cakes.html")
+
 
 
 
