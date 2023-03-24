@@ -52,8 +52,10 @@
     justify-content: space-around;
     height: 80px;
     line-height: 80px;
+    position: absolute;
     z-index: 111;
     background-color:var(--background-color); 
+
     
     }
     .logo {
@@ -93,7 +95,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url(../images/hero-image.jpg);
+    /* background-image: url(../images/hero-image.jpg); */
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
