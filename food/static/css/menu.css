@@ -1,3 +1,7 @@
+.container-fluid {
+    top: 15%;
+    position: absolute;
+}
 .tittle {
     text-align: center;
     margin: 58px;
