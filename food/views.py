@@ -23,7 +23,7 @@ def cakes(request):
 
 
 def donut(request):
-    donuts = Cake.objects.all()
+    donuts = Donut.objects.all()
     ctx = {'donuts': donuts}
     print(donuts)
     return render(request, "food/donuts.html", ctx)

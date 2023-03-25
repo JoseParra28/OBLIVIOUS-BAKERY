@@ -32,24 +32,24 @@
         <div class="container-fluid">
             <div class="row text-center">
                 <div class="col-md-8">
-                    <h1 class="tittle">Our Cakes</h1>
+                    <h1 class="tittle">Our Donuts</h1>
                     <div class="row">
-                        {% for cake in cakes %}
+                        {% for donut in donuts %}
                         <div class="col-md-6 p-4">
-                        <img src="{{ cake.p_image }}" alt="cake image" class="cake-images">
+                        <img src="{{ donut.p_image }}" alt="cake image" class="cake-images">
                         <h4 class="pt-3">
-                            {{ cake.name }}
+                            {{ donut.name }}
                         </h4>
                         <div class="form-check-inline">
                             <label for="form-check-inline">
                                 <input type="radio" class="form-check-input" checked>
-                                {{ cake.price_m }}
+                                {{ donut.price_m }}
                             </label>
                         </div>
                         <div class="form-check-inline">
                             <label for="form-check-inline">
                                 <input type="radio" class="form-check-input" checked>
-                                {{ cake.price_l }}
+                                {{ donut.price_l }}
                             </label>
                         </div>
                         <div>
