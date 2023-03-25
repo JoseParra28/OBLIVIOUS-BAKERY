@@ -16,7 +16,10 @@ def pie(request):
 
 
 def cakes(request):
-    return render(request, "food/cakes.html")
+    cakes = Cake.objects.all()
+    ctx = {'cakes': cakes}
+    print(cakes)
+    return render(request, "food/cakes.html", ctx)
 
 
 
