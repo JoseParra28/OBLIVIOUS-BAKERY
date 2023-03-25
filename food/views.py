@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-from .models import Pie
+from .models import Pie, Cake, Donut
 
 
 def index(request):
@@ -11,7 +11,8 @@ def index(request):
 def pie(request):
     pies = Pie.objects.all()
     ctx = {'pies': pies}
-    return render(request, "food/pies.html")
+    print(pies)
+    return render(request, "food/pies.html", ctx)
 
 
 def cakes(request):
