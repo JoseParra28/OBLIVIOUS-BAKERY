@@ -27,19 +27,56 @@
                 </ul>
     </nav>
  
-        {% block content %}
 
-        {% for pie in pies %}
+<section class="pie_section">
+    {% block content %}
 
-        <h2>Pie name: {{ pie.name }}
-            Price Medium: {{ pie.price_m }} </h2>
+    <div class="container-fluid">
+        <div class="row text-center">
+            <div class="col-md-8">
+                <h1 class="tittle">Our Pies</h1>
+                <div class="row">
+                    {% for pie in pies %}
+                    <div class="col-md-6 p-4">
+                    <img src="{{ pie.p_image }}" alt="pie image" class="pie-images">
+                    <h4 class="pt-3">
+                        {{ pie.name }}
+                    </h4>
+                    <div class="form-check-inline">
+                        <label for="form-check-inline">
+                            <input type="radio" class="form-check-input" checked>
+                            {{ pie.price_m }}
+                        </label>
+                    </div>
+                    <div class="form-check-inline">
+                        <label for="form-check-inline">
+                            <input type="radio" class="form-check-input" checked>
+                            {{ pie.price_l }}
+                        </label>
+                    </div>
+                    <div>
+                        <button class="btn mt-3">Add to cart</button>
+                    </div>
+                   
+                </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
-        {% endfor %}
-        
-        
-        
-        
-        {% endblock %}
+
+
+   
+    
+    
+    
+    {% endblock %}
+
+
+</section>
+      
 
         
    

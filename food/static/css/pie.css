@@ -1,0 +1,9 @@
+.tittle {
+    text-align: center;
+    margin: 58px;
+}
+.pie-images {
+    width: 300px;
+    border-radius: 10% 5%;
+    height: 200px;
+}
