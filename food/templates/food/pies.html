@@ -33,25 +33,25 @@
 <section class="pie-section">
     {% block content %}
     <div class="container-fluid">
-        <div class="row text-center">
-            <div class="col-md-8">
+        <div class="row">
+            <div class="col-md-8 text-center">
                 <h1 class="tittle">Our Pies</h1>
                 <div class="row">
                     {% for pie in pies %}
                     <div class="col-md-6 p-4">
                     <img src="{{ pie.p_image }}" alt="pie image" class="pie-images">
-                    <h4 class="pt-3">
+                    <h4 class="pt-3" id="pie-id{{ pie.id }}">
                         {{ pie.name }}
                     </h4>
                     <div class="form-check-inline">
                         <label for="form-check-inline">
-                            <input type="radio" class="form-check-input" checked>
+                            <input  class="form-check-input" type="radio" name="{{ pie.id }}" checked>
                             L: {{ pie.price_m }}
                         </label>
                     </div>
                     <div class="form-check-inline">
                         <label for="form-check-inline">
-                            <input type="radio" class="form-check-input" checked>
+                            <input class="form-check-input" type="radio" name="{{ pie.id }}"  checked>
                            L: {{ pie.price_l }}
                         </label>
                     </div>
@@ -64,7 +64,7 @@
                 </div>
             </div>
             <div class="col-md-4 orders">
-                <h3 class="order-text">Order list</h3>
+                <h3 class="text-center">Order list</h3>
                 <ul id="trolley" ></ul>
                 <h4 class="order-text-2" id="trolley-total"> Total: 0 £</h4>
             </div>
@@ -79,7 +79,7 @@
    
    
 
- 
+<script src="{% static 'javascript/orders.js' %}"></script>
 <script src="{% static 'javascript/main.js' %}"></script>
 </body>
 </html>
