@@ -29,4 +29,7 @@ def donut(request):
     return render(request, "food/donuts.html", ctx)
 
 
+def order(request):
+    ctx = {'active_link': 'order'}
+    return render(request, "food/order-list.html", ctx)
 
