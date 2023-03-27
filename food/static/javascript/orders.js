@@ -18,7 +18,23 @@ function addPie(pie){
         price = pric[1].value;
         size = 'L'
     }
+    
+    let  orders = JSON.parse(localStorage.getItem('orders'));
+    let  total = localStorage.getItem('total');
+    let cartSize = orders .length;
+    // add and item in local storage
 
+    orders[cartSize] = [name, size, price];
+    localStorage.setItem('orders', JSON.stringify(orders));
+   
+    total = Number(total) + Number(price);
+    localStorage.setItem('total', total);
+
+    // updating order 
+    const trolley = document.querySelector('#trolley');
+    trolley.innerHTML = orders.length;
+
+    pTotal.innerHTML = 'Total ' + total + ' £';
     pCart.innerHTML += '<li>' + name + ' ' + size + ' : ' + price + '</li>';
     
 }
