@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from .models import Pie, Cake, Donut
+from django.views.decorators.csrf import csrf_exempt
 
 
 def index(request):
@@ -29,7 +30,11 @@ def donut(request):
     return render(request, "food/donuts.html", ctx)
 
 
+@csrf_exempt
 def order(request):
+    if request.is_ajax():
+        test = request.POST.get['test']
+        print(test)
     ctx = {'active_link': 'order'}
     return render(request, "food/order-list.html", ctx)
 

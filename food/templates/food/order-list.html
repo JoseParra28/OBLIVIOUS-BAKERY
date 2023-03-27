@@ -65,7 +65,7 @@
             <h2>please add a message to customize your order. </h2>
             <textarea name="message" id="message" cols="30" rows="8"></textarea>
             <div class="ml-auto m-4">
-                <button type="submit" class="submit-order-btn">Submit</button>
+                <button type="submit" class="submit-order-btn" onclick="placeOrder()">Submit</button>
             </div>
         </div>
     </div>
@@ -73,6 +73,7 @@
 
 
  <!-- <script src="{% static 'javascript/orders.js' %}"></script> -->
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
  <script src="{% static 'javascript/order-list.js' %}"></script>
 <script src="{% static 'javascript/main.js' %}"></script>
 

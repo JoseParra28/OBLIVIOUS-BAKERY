@@ -6,7 +6,7 @@ let orderBtn = document.querySelector('#remove-item-order')
 
 
 
-function orderListF() {
+function orderList() {
     let  orders = JSON.parse(localStorage.getItem('orders'));
     let  total = localStorage.getItem('total');
     let cartSize = orders .length;
@@ -29,4 +29,4 @@ function orderListF() {
     }
     totalBill.innerHTML = '<h3>order total</h3>' + total + ' £';
 }
-orderListF();
+orderList();

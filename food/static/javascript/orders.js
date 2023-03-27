@@ -66,6 +66,21 @@ function removeItem(n){
 
     localStorage.setItem('orders', JSON.stringify(orders));
     localStorage.setItem('total', total);
+
     shoppingCart();
-    removeItem()
+}
+
+function placeOrder(){
+    let test = "Ajax test";
+    let ur = '/food/order-list/';
+    let orderData = {};
+    orderData['test'] = test;
+    $.ajax({
+        url: ur,
+        type: "POST",
+        data: orderData,
+        success: function(data){
+            console.log('the data was sent')
+        }
+    })
 }
