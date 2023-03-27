@@ -58,7 +58,7 @@
                         </label>
                     </div>
                     <div>
-                        <button class="btn mt-3">Add to cart</button>
+                        <button class="btn mt-3" onclick="addPie('{{ pie.id }}')">Add to cart</button>
                     </div>
                    
                 </div>
@@ -66,12 +66,14 @@
                 </div>
             </div>
             <div class="col-md-4 orders">
+                <div class="bg-light p-4 rounded">
                 <h3 class="text-center">Order list</h3>
                 <ul id="p-cart" ></ul>
                 <h4 class="text-right" id="p-total"> Total: 0 £</h4>
             </div>
         </div>
     </div>
+</div>
 </div>
     {% endblock %}
 </section>
