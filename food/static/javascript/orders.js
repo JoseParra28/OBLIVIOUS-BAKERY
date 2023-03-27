@@ -34,8 +34,9 @@ function addPie(pie){
     const trolley = document.querySelector('#trolley');
     trolley.innerHTML = orders.length;
 
+    btn = '<button class="revome-btn onclick="removeItem(' + cartSize + ')>Remove</button>';
     pTotal.innerHTML = 'Total ' + total + ' £';
-    pCart.innerHTML += '<li>' + name + ' ' + size + ' : ' + price + '</li>';
+    pCart.innerHTML += '<li>' + name + ' ' + size + ' : ' + price + ' ' + btn +'</li>';
     
 }
 
@@ -45,8 +46,20 @@ function shoppingCart() {
     let cartSize = orders .length;
     pCart.innerHTML = ''
     for (let i = 0; i < cartSize; i++ ){
-        pCart.innerHTML += '<li>' + orders[i][0] + ' ' + orders[i][1] + ' : ' + orders[i][2] + '</li>';
+        btn = '<button class="revome-btn onclick="removeItem(' + i + ')">Remove</button>';
+        pCart.innerHTML += '<li>' + orders[i][0] + ' ' + orders[i][1] + ' : ' + orders[i][2] + btn; '</li>';
     }
     pTotal.innerHTML = 'Total ' + total + ' £';
 }
 shoppingCart();
+
+function removeItem(n){
+    let  orders = JSON.parse(localStorage.getItem('orders'));
+    let  total = localStorage.getItem('total');
+    total = Number(total) - Number(orders[n][2]);
+    orders.splice(n,1);
+    localStorage.setItem('orders', JSON.stringify(orders));
+    localStorage.setItem('total', total);
+    shoppingCart();
+    removeItem()
+}
