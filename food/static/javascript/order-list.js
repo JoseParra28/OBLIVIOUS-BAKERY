@@ -10,9 +10,9 @@ function orderListF() {
     let  total = localStorage.getItem('total');
     let cartSize = orders .length;
 
-    billName.innerHTML = 'Name';
-    size.innerHTML = 'Size';
-    price.innerHTML = 'Price';
+    billName.innerHTML = '<h3>name</h3>';
+    size.innerHTML = '<h3>size</h3>';
+    price.innerHTML = '<h3>price</h3>';
    
  
 
@@ -25,6 +25,6 @@ function orderListF() {
 
         // pCart.innerHTML += '<li>' + orders[i][0] + ' ' + orders[i][1] + ' : ' + orders[i][2] + btn + '</li>';
     }
-    totalBill.innerHTML = 'Total ' + total + ' £';
+    totalBill.innerHTML = '<h3>order total</h3>' + total + ' £';
 }
 orderListF();
