@@ -70,11 +70,13 @@ function removeItem(n){
     shoppingCart();
 }
 
-function placeOrder(){
-    let test = "Ajax test";
-    let ur = '/food/order-list/';
+let note = document.querySelector('#message')
+
+function order(){
+    let msg = note.value;
+    let ur = '/order-list';
     let orderData = {};
-    orderData['test'] = test;
+    orderData['note'] = msg;
     $.ajax({
         url: ur,
         type: "POST",
@@ -84,3 +86,4 @@ function placeOrder(){
         }
     })
 }
+order()

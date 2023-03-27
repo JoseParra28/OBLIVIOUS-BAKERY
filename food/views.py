@@ -33,8 +33,8 @@ def donut(request):
 @csrf_exempt
 def order(request):
     if request.is_ajax():
-        test = request.POST.get['test']
-        print(test)
+        note = request.POST.get('note')
+        print(note)
     ctx = {'active_link': 'order'}
     return render(request, "food/order-list.html", ctx)
 
