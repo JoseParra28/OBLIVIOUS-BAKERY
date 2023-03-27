@@ -47,7 +47,7 @@ function shoppingCart() {
     pCart.innerHTML = ''
     for (let i = 0; i < cartSize; i++ ){
         btn = '<button class="revome-btn onclick="removeItem(' + i + ')">Remove</button>';
-        pCart.innerHTML += '<li>' + orders[i][0] + ' ' + orders[i][1] + ' : ' + orders[i][2] + btn; '</li>';
+        pCart.innerHTML += '<li>' + orders[i][0] + ' ' + orders[i][1] + ' : ' + orders[i][2] + btn + '</li>';
     }
     pTotal.innerHTML = 'Total ' + total + ' £';
 }
@@ -56,8 +56,14 @@ shoppingCart();
 function removeItem(n){
     let  orders = JSON.parse(localStorage.getItem('orders'));
     let  total = localStorage.getItem('total');
+
     total = Number(total) - Number(orders[n][2]);
     orders.splice(n,1);
+    
+     // updating order 
+     const trolley = document.querySelector('#trolley');
+     trolley.innerHTML = orders.length;
+
     localStorage.setItem('orders', JSON.stringify(orders));
     localStorage.setItem('total', total);
     shoppingCart();
