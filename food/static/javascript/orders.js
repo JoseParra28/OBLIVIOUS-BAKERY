@@ -38,3 +38,15 @@ function addPie(pie){
     pCart.innerHTML += '<li>' + name + ' ' + size + ' : ' + price + '</li>';
     
 }
+
+function shoppingCart() {
+    let  orders = JSON.parse(localStorage.getItem('orders'));
+    let  total = localStorage.getItem('total');
+    let cartSize = orders .length;
+    pCart.innerHTML = ''
+    for (let i = 0; i < cartSize; i++ ){
+        pCart.innerHTML += '<li>' + orders[i][0] + ' ' + orders[i][1] + ' : ' + orders[i][2] + '</li>';
+    }
+    pTotal.innerHTML = 'Total ' + total + ' £';
+}
+shoppingCart();
