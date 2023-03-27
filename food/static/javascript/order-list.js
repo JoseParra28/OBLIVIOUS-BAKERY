@@ -14,11 +14,12 @@ function orderListF() {
     billName.innerHTML = '<h3>name</h3>';
     size.innerHTML = '<h3>size</h3>';
     price.innerHTML = '<h3>price</h3>';
+    orderBtn.innerHTML = '<h3><br></h3>';
    
  
 
     for (let i = 0; i < cartSize; i++ ){
-        orderBtn.innerHTML  += '<div> class="revome-btn onclick="removeItemOrder(' + i + ')">Remove</div>';
+        orderBtn.innerHTML  += '<h4><button> class="btn-danger" onclick="removeItem(' + i + ')" style="position:relative;>Remove</button></h4>';
         billName.innerHTML += '<h4>'+ orders[i][0] +'</h4>'
         size.innerHTML += '<h4>'+ orders[i][1] +'</h4>'
         price.innerHTML += '<h4>'+ orders[i][2] +'</h4>'
