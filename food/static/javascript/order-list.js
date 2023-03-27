@@ -2,6 +2,7 @@ let billName = document.querySelector('#ord-name')
 let size = document.querySelector('#ord-size')
 let price = document.querySelector('#ord-price')
 let totalBill = document.querySelector('#total-bill')
+let orderBtn = document.querySelector('#remove-item-order')
 
 
 
@@ -17,7 +18,7 @@ function orderListF() {
  
 
     for (let i = 0; i < cartSize; i++ ){
-        // btn = '<button class="revome-btn onclick="removeItem(' + i + ')">Remove</button>';
+        orderBtn.innerHTML  += '<div> class="revome-btn onclick="removeItemOrder(' + i + ')">Remove</div>';
         billName.innerHTML += '<h4>'+ orders[i][0] +'</h4>'
         size.innerHTML += '<h4>'+ orders[i][1] +'</h4>'
         price.innerHTML += '<h4>'+ orders[i][2] +'</h4>'

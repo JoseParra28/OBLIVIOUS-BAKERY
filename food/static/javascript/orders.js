@@ -34,7 +34,7 @@ function addPie(pie){
     const trolley = document.querySelector('#trolley');
     trolley.innerHTML = orders.length;
 
-    btn = '<button class="revome-btn onclick="removeItem(' + cartSize + ')>Remove</button>';
+    btn = '<button class="remove-btn onclick="removeItemPie(' + cartSize + ')>Remove</button>';
     pTotal.innerHTML = 'Total ' + total + ' £';
     pCart.innerHTML += '<li>' + name + ' ' + size + ' : ' + price + ' ' + btn +'</li>';
     
@@ -46,7 +46,7 @@ function shoppingCart() {
     let cartSize = orders .length;
     pCart.innerHTML = ''
     for (let i = 0; i < cartSize; i++ ){
-        btn = '<button class="revome-btn onclick="removeItem(' + i + ')">Remove</button>';
+        btn = '<button class="remove-btn" onclick="removeItem(' + i + ')">Remove</button>';
         pCart.innerHTML += '<li>' + orders[i][0] + ' ' + orders[i][1] + ' : ' + orders[i][2] + btn + '</li>';
     }
     pTotal.innerHTML = 'Total ' + total + ' £';
@@ -59,7 +59,7 @@ function removeItem(n){
 
     total = Number(total) - Number(orders[n][2]);
     orders.splice(n,1);
-    
+
      // updating order 
      const trolley = document.querySelector('#trolley');
      trolley.innerHTML = orders.length;
