@@ -25,8 +25,28 @@ function orderList() {
         price.innerHTML += '<h4>'+ orders[i][2] +'</h4>'
 
 
-        // pCart.innerHTML += '<li>' + orders[i][0] + ' ' + orders[i][1] + ' : ' + orders[i][2] + btn + '</li>';
+        pCart.innerHTML += '<li>' + orders[i][0] + ' ' + orders[i][1] + ' : ' + orders[i][2] + btn + '</li>';
     }
     totalBill.innerHTML = '<h3>order total</h3>' + total + ' £';
+    
+    orderList();
 }
-orderList();
+
+let note = document.querySelector('#message')
+
+function submitOrder(){
+    let msg = note.value;
+    let orders = localStorage.getItem('orders');
+    orderData['orders'] = orders;
+    let ur = 'food/order-list';
+    let orderData = {};
+    orderData['note'] = msg;
+    $.ajax({
+        url: ur,
+        type: "POST",
+        data: orderData,
+        success: function(data){
+            console.log('the data was sent');
+        }
+    })
+}

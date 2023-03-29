@@ -70,20 +70,3 @@ function removeItem(n){
     shoppingCart();
 }
 
-let note = document.querySelector('#message')
-
-function order(){
-    let msg = note.value;
-    let ur = '/order-list';
-    let orderData = {};
-    orderData['note'] = msg;
-    $.ajax({
-        url: ur,
-        type: "POST",
-        data: orderData,
-        success: function(data){
-            console.log('the data was sent')
-        }
-    })
-}
-order()
