@@ -117,6 +117,10 @@
     display: flex;
     justify-content: space-evenly;
 }
+/* ------------------------------ sign up form section  */
 .form-section {
     top: 30%;
+}
+#id_username, #id_email, #id_first_name, #id_password1, #id_password2{
+    border-radius: 30px;
 }
