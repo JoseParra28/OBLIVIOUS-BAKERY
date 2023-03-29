@@ -59,3 +59,7 @@ def signup(request):
     return render(request, 'food/signup.html', ctx)          
 
 
+def login(request):
+    ctx = {'active_link': 'login'}
+    return render(request, 'food/login.html', ctx)
+

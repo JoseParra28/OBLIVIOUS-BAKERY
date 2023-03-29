@@ -122,5 +122,8 @@
     top: 30%;
 }
 #id_username, #id_email, #id_first_name, #id_password1, #id_password2{
-    border-radius: 30px;
+    border-radius: 10px;
+}
+.form-section p {
+    font-size: 4rem;
 }
