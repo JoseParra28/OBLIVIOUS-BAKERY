@@ -51,8 +51,10 @@ def signup(request):
             form.save()
             return redirect('index')
         else:
-            ctm['form'] = form
+            ctx['form'] = form
     else:
         form = UserCreationForm()
         ctx['form'] = form
-    return render(request, 'food/signup.html', ctx)           
+    return render(request, 'food/signup.html', ctx)          
+
+

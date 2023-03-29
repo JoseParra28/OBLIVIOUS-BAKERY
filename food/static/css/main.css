@@ -117,3 +117,6 @@
     display: flex;
     justify-content: space-evenly;
 }
+.form-section {
+    top: 30%;
+}
