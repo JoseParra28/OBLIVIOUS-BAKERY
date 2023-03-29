@@ -1,9 +1,11 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from .models import Pie, Cake, Donut
-from django.views.decorators.csrf import csrf_exempt
 from django.contrib.auth.forms import UserCreationForm
 from .forms import NewUserForm
+from django.contrib.auth import authenticate, login
+from django.views.decorators.csrf import csrf_exempt
+from django.contrib import messages
 
 
 def index(request):
@@ -59,7 +61,18 @@ def signup(request):
     return render(request, 'food/signup.html', ctx)          
 
 
-def login(request):
+def logIn(request):
+    if request.POST:
+        username = request.POST.get('username')
+        pwd = request.POST.get('password')
+        user = authenticate(request, username, password=pwd)
+        if user is not None:
+            logIn(request, user)
+        else:
+            messages.info(request, 'Username and/or password are not correct')
+            redirect('index')
+        # print(username)
+        # print(pwd)
     ctx = {'active_link': 'login'}
     return render(request, 'food/login.html', ctx)
 
