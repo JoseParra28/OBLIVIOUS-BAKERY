@@ -127,3 +127,12 @@
 .form-section p {
     font-size: 4rem;
 }
+li {
+    font-size: 1rem;
+}
+.p-5 {
+    position: relative;
+    width: 100vh;
+    height: 70vh;
+    padding-bottom: 15%;
+}
