@@ -1,7 +1,8 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from .models import Pie, Cake, Donut
 from django.views.decorators.csrf import csrf_exempt
+from django.contrib.auth.forms import UserCreationForm
 
 
 def index(request):
@@ -41,3 +42,17 @@ def order(request):
     ctx = {'active_link': 'order-list'}
     return render(request, "food/order-list.html", ctx)
 
+
+def signup(request):
+    ctx = {}
+    if request.POST:
+        form = UserCreationForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('index')
+        else:
+            ctm['form'] = form
+    else:
+        form = UserCreationForm()
+        ctx['form'] = form
+    return render(request, 'food/signup.html', ctx)           
