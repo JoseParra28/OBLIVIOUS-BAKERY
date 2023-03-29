@@ -3,6 +3,7 @@ from django.http import HttpResponse
 from .models import Pie, Cake, Donut
 from django.views.decorators.csrf import csrf_exempt
 from django.contrib.auth.forms import UserCreationForm
+from .forms import NewUserForm
 
 
 def index(request):
@@ -46,14 +47,14 @@ def order(request):
 def signup(request):
     ctx = {}
     if request.POST:
-        form = UserCreationForm(request.POST)
+        form = NewUserForm(request.POST)
         if form.is_valid():
             form.save()
             return redirect('index')
         else:
             ctx['form'] = form
     else:
-        form = UserCreationForm()
+        form = NewUserForm()
         ctx['form'] = form
     return render(request, 'food/signup.html', ctx)          
 
