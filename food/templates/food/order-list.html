@@ -71,7 +71,7 @@
 
             {% if user.is_authenticated %}
             <div class="ml-auto m-4">
-                <button type="submit" class="submit-order-btn" onclick="submitOrder()"> Submit </button>
+                <button type="submit" class="submit-order-btn" onclick="order()"> Submit </button>
             </div>
             {% else %}
             <div class="ml-auto m-4">
@@ -83,12 +83,12 @@
 </div>
 
 
- <script src="{% static 'javascript/orders.js' %}"></script>
+ <!-- <script src="{% static 'javascript/orders.js' %}"></script> -->
 
  <!-- <script src="{% static 'javascript/order-list.js' %}"></script> -->
 <!-- <script src="{% static 'javascript/main.js' %}"></script> -->
 <script src="{% static 'javascript/shopping-cart.js' %}"></script>
-<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script> -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
 
 </body>
 </html>
