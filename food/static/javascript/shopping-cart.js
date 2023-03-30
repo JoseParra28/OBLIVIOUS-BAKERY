@@ -59,6 +59,7 @@ let note = document.querySelector('#message')
         type: "POST",
         data: orderData,
         success: function(data){
+            window.location.replace('/susscess.html');
             console.log("The data was sent")
         }
     })

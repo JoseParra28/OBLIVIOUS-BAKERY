@@ -50,6 +50,12 @@ def order(request):
     return render(request, "food/order-list.html", ctx)
 
 
+def susscess(request):
+    order = request.session['orders']
+    ctx = {'order': order}
+    return render(request, 'food/susscess.html')    
+
+
 def signup(request):
     request.session.set_expiry(0)
     ctx = {}
