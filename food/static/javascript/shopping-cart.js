@@ -47,8 +47,12 @@ let note = document.querySelector('#message')
 
  function order(){
     let msg = note.value;
+    let orders = localStorage.getItem('orders')
+
+
     let url = 'food/shopping-cart';
     let orderData = {};
+    orderData['orders'] = orders;
     orderData['note'] = msg;
     $.ajax({
         urls:url,
