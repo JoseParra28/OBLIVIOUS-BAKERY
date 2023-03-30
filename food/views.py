@@ -3,7 +3,7 @@ from django.http import HttpResponse
 from .models import Pie, Cake, Donut
 from django.contrib.auth.forms import UserCreationForm
 from .forms import NewUserForm
-from django.contrib.auth import authenticate, login
+from django.contrib.auth import authenticate, login, logout
 from django.views.decorators.csrf import csrf_exempt
 from django.contrib import messages
 
@@ -75,3 +75,8 @@ def signInView(request):
         print("Password:", pwd)
     ctx = {'active_link': 'login'}
     return render(request, 'food/login.html', ctx)
+
+
+def logOut(request):
+    ctx = {'name': 'OBLIVIOUS BAKERY'}
+    return render(request, "food/logout.html", ctx)
