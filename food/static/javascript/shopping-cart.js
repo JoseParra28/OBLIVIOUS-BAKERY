@@ -42,11 +42,14 @@ function removeItem(n){
     shoppingCartTotal();
 }
 
+let note = document.querySelector('#message')
+
+
  function order(){
-    let test = "Ajax test";
+    let msg = note.value;
     let url = 'food/shopping-cart';
     let orderData = {};
-    orderData['test'] = test;
+    orderData['note'] = msg;
     $.ajax({
         urls:url,
         type: "POST",
