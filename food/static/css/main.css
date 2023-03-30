@@ -90,6 +90,14 @@
         -webkit-text-fill-color: transparent;
         -moz-text-fill-color:transparent;
     }
+    .welcome-msg {
+        background-image: linear-gradient(45deg, #782b25 0%, #a23930 0%, #872b20 21%, #d9402f 52%, #61111f 78%, #6a1818 100%);
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -moz-text-fill-color:transparent;
+        font-size: 1.3rem;
+    }
 
 /* ---------------------------Hero section */
 .hero-img img {

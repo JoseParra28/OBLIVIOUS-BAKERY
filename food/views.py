@@ -70,9 +70,8 @@ def signInView(request):
             signInView(request, user)
             return redirect('index')
         else:
-            print("invalid")
             messages.info(request, 'Username and/or password are not correct')
-        # print("Email:", username)
-        # print("Password:", pwd)
+        print("Email:", username)
+        print("Password:", pwd)
     ctx = {'active_link': 'login'}
     return render(request, 'food/login.html', ctx)
