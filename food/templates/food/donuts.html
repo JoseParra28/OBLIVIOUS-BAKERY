@@ -9,11 +9,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
     <link rel="stylesheet" href="{% static 'css/main.css' %}">
     <link rel="stylesheet" href="{% static 'css/menu.css' %}">
-
-    <title>Pie</title>
+    <title>{% block tittle %} {{ name }} {% endblock %}</title>
     
 </head>
+
 <body>
+    {{ name }}
 <!-- nav-bar -->
 <div class="wrapper">
     <nav class="nav-bar">
@@ -29,53 +30,60 @@
             <li><a href="order-list.html"><i class="fa fa-basket-shopping"></i><span id="trolley">0</span></a></li>
         </ul>
     </nav>
-    <!-- -------- cakes menu -->
-    <section class="cakes-section">
-        {% block content %}
-        <div class="container-fluid">
-            <div class="row text-center">
-                <div class="col-md-8">
-                    <h1 class="tittle">Our Donuts</h1>
-                    <div class="row">
-                        {% for donut in donuts %}
-                        <div class="col-md-6 p-4">
-                        <img src="{{ donut.p_image }}" alt="cake image" class="cake-images">
-                        <h4 class="pt-3">
-                            {{ donut.name }}
-                        </h4>
-                        <div class="form-check-inline">
-                            <label for="form-check-inline">
-                                <input type="radio" class="form-check-input" value="{{ donut.price_m }}" name="{{ donut.id }}" checked>
-                               M: {{ donut.price_m }}
-                            </label>
-                        </div>
-                        <div class="form-check-inline">
-                            <label for="form-check-inline">
-                                <input type="radio" class="form-check-input"value="{{ donut.price_l }}" name="{{ donut.id }}" checked>
-                               L: {{ donut.price_l }}
-                            </label>
-                        </div>
-                        <div>
-                            <button class="btn mt-3">Add to cart</button>
-                        </div>
-                       
+ 
+<!-- -------------pie menu -->
+<section class="pie-section">
+    {% block content %}
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-8 text-center">
+                <h1 class="tittle">Our Donuts</h1>
+                <div class="row">
+                    {% for donut in donuts %}
+                    <div class="col-md-6 p-4">
+                    <img src="{{ donut.p_image }}" alt="pie image" class="pie-images">
+                    <h4 class="pt-3" id="pie-id{{ pie.id }}">
+                        {{ donut.name }}
+                    </h4>
+                    <div class="form-check-inline">
+                        <label for="form-check-inline">
+                            <input  class="form-check-input" type="radio" value="{{ pie.price_m }}" name="pie-rad{{ pie.id }}" checked>
+                            M: {{ donut.price_m }}
+                        </label>
                     </div>
-                        {% endfor %}
+                    <div class="form-check-inline">
+                        <label for="form-check-inline">
+                            <input class="form-check-input" type="radio" value="{{ pie.price_l }}" name="pie-rad{{ pie.id }}"  checked>
+                           L: {{ donut.price_l }}
+                        </label>
                     </div>
+                    <div>
+                        <button class="btn mt-3" onclick="addPie('{{ pie.id }}')">Add to cart</button>
+                    </div>
+                   
                 </div>
-                <div class="col-md-4 orders">
-                    <h3 class="text-center">Order list</h3>
-                    <ul id="trolley" ></ul>
-                    <h4 class="order-text-2 text-right" id="trolley-total"> Total: 0 £</h4>
+                    {% endfor %}
                 </div>
+            </div>
+            <div class="col-md-4 orders">
+                <div class="bg-light p-4 rounded">
+                <h3 class="text-center">Order list</h3>
+                <ul id="p-cart" ></ul>
+                <h4 class="text-right" id="p-total"> Total: 0 £</h4>
             </div>
         </div>
     </div>
-        {% endblock %}
-    </section>
+</div>
+</div>
+    {% endblock %}
+</section>
+      
+
+        
+   
    
 
-    <script src="{% static 'javascript/orders.js' %}"></script>
+<script src="{% static 'javascript/orders.js' %}"></script>
 <script src="{% static 'javascript/main.js' %}"></script>
 </body>
 </html>
