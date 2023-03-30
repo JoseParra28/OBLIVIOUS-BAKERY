@@ -61,18 +61,17 @@ def signup(request):
     return render(request, 'food/signup.html', ctx)          
 
 
-def logIn(request):
+def signIn(request):
     if request.POST:
         username = request.POST.get('username')
         pwd = request.POST.get('password')
-        user = authenticate(request, username, password=pwd)
+        user = authenticate(request, username=username, password=pwd)
         if user is not None:
-            logIn(request, user)
+            signIn(request, user)
         else:
             messages.info(request, 'Username and/or password are not correct')
             redirect('index')
-        # print(username)
-        # print(pwd)
+        print(username)
+        print(pwd)
     ctx = {'active_link': 'login'}
     return render(request, 'food/login.html', ctx)
-
