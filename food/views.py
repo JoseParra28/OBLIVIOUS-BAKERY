@@ -9,11 +9,13 @@ from django.contrib import messages
 
 
 def index(request):
+    request.session.set_expiry(0)
     ctx = {'name': 'OBLIVIOUS BAKERY'}
     return render(request, "food/index.html", ctx)
 
 
 def pie(request):
+    request.session.set_expiry(0)
     pies = Pie.objects.all()
     ctx = {'pies': pies}
     print(pies)
@@ -21,6 +23,7 @@ def pie(request):
 
 
 def cakes(request):
+    request.session.set_expiry(0)
     cakes = Cake.objects.all()
     ctx = {'cakes': cakes}
     print(cakes)
@@ -28,6 +31,7 @@ def cakes(request):
 
 
 def donut(request):
+    request.session.set_expiry(0)
     donuts = Donut.objects.all()
     ctx = {'donuts': donuts}
     print(donuts)
@@ -37,15 +41,17 @@ def donut(request):
 @csrf_exempt
 def order(request):
     if request.is_ajax():
-        note = request.POST.get('note')
-        print(note)
-        orders = request.POST.get('orders')
-        print(orders)
+        request.session.set_expiry(0)
+        note = request.session['note'] = request.POST.get('note')
+        orders = request.session['orders'] = request.POST.get('orders')
+        print(note, orders)
+        
     ctx = {'active_link': 'order-list'}
     return render(request, "food/order-list.html", ctx)
 
 
 def signup(request):
+    request.session.set_expiry(0)
     ctx = {}
     if request.POST:
         form = NewUserForm(request.POST)
@@ -61,6 +67,7 @@ def signup(request):
 
 
 def signInView(request):
+    request.session.set_expiry(0)
     if request.POST:
         username = request.POST.get('username')
         pwd = request.POST.get('password')
@@ -77,5 +84,6 @@ def signInView(request):
 
 
 def logOut(request):
+    request.session.set_expiry(0)
     ctx = {'name': 'OBLIVIOUS BAKERY'}
     return render(request, "food/logout.html", ctx)
