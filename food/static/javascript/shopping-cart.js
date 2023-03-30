@@ -41,7 +41,7 @@ function removeItem(n){
 
     shoppingCartTotal();
 }
-
+// Ajax
 let note = document.querySelector('#message')
 
 
@@ -60,6 +60,8 @@ let note = document.querySelector('#message')
         data: orderData,
         success: function(data){
             window.location.replace('/susscess.html');
+            localStorage.setItem('orders', JSON.stringify([]));
+            localStorage.setItem('total', 0);
             console.log("The data was sent")
         }
     })
