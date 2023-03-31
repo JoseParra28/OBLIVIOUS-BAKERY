@@ -57,9 +57,14 @@ def order(request):
         if request.user.is_authenticated:
             order = Order(customer=request.user, number=randomOrderNumber(6), totall=float(request.session['totall']), note=request.session['note'])
             order.save()
-            for item in orders:
-                item = 
-        
+            for article in orders:
+                item = Item(
+                    order=order, 
+                    name=article[0],
+                    price=float(article[2]),
+                    size=article[1]
+                )
+                item.save()
     ctx = {'active_link': 'order-list'}
     return render(request, "food/order-list.html", ctx)
 
