@@ -48,12 +48,14 @@ let note = document.querySelector('#message')
  function order(){
     let msg = note.value;
     let orders = localStorage.getItem('orders')
+    let totall = localStorage.getItem('totall')
 
 
     let url = 'food/shopping-cart';
     let orderData = {};
     orderData['orders'] = orders;
     orderData['note'] = msg;
+    orderData['bill'] = totall;
     $.ajax({
         urls:url,
         type: "POST",

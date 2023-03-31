@@ -146,7 +146,6 @@ li {
 }
 /* -----------------------------------susscess page */
 .susscess-msg, p {
-    position: absolute;
     top: 30%;
     display: flex;
 }

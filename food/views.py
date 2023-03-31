@@ -1,11 +1,19 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
-from .models import Pie, Cake, Donut
+from .models import Pie, Cake, Donut, Order, Item
 from django.contrib.auth.forms import UserCreationForm
 from .forms import NewUserForm
 from django.contrib.auth import authenticate, login, logout
 from django.views.decorators.csrf import csrf_exempt
 from django.contrib import messages
+import random
+import json
+
+
+def randomOrderNumber(length):
+    sample = 'ABCDE123456789'
+    numberO = ''.join(random.choice(sample) for i in range(length))
+    return numberO
 
 
 def index(request):
@@ -44,7 +52,13 @@ def order(request):
         request.session.set_expiry(0)
         note = request.session['note'] = request.POST.get('note')
         orders = request.session['orders'] = request.POST.get('orders')
-        print(note, orders)
+        orders = json.loads(request.session['orders'])
+        totall = request.session['totall'] = request.POST.get('totall')
+        if request.user.is_authenticated:
+            order = Order(customer=request.user, number=randomOrderNumber(6), totall=float(request.session['totall']), note=request.session['note'])
+            order.save()
+            for item in orders:
+                item = 
         
     ctx = {'active_link': 'order-list'}
     return render(request, "food/order-list.html", ctx)
