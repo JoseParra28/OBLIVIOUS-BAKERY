@@ -122,8 +122,10 @@
     width: 85%;
 }
 .text-center {
-    display: flex;
     justify-content: space-evenly;
+}
+.orders {
+    padding-top: 10%;
 }
 /* ------------------------------ sign up form section  */
 .form-section {
