@@ -36,18 +36,18 @@
         <img src="{% static 'images/bread-hero.jpg' %}" alt="bread image">
     </div>
  </div> -->
-<section class="signup-form-section">
-    <div class="container-fluid p-5">
-        <div class="row">
+<section class="singup-form-section">
+    <div class="container-fluid signup-container">
+        <div class="">
             <div class="col-md-e"></div>
-            <div class="col-md-6 p-5 bg-dark text-light text-center">
+            <div class="p-5 bg-light text-dark text-center">
                 <h3>Signup</h3>
                 <li><a href="login.html" class="text-center">login</a></li>
                 <form method="POST">
                     {% csrf_token %}
 
                     {% for field in form %}
-                    <div class="form-group">
+                    <div class="form-group-logout">
                         <div>
                             {{ field.label_tag }}
                         </div>
