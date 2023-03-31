@@ -16,9 +16,6 @@
 <!-- nav-bar -->
 <div class="wrapper">
     <nav class="nav-bar">
-        <div class="logo">
-            <img src="{% static 'images/oblivious-logo.jpg' %}" alt="image" class="logo-img" style="width: 110px; height: 100%;">
-        </div>
         <ul class="nav-items">
             <li><a href="index.html">home</a></li>
             <li><a href="pie.html">pies</a></li>
@@ -35,12 +32,13 @@
         <img src="{% static 'images/bread-hero.jpg' %}" alt="bread image">
     </div>
  </div> -->
-<section class="form-section">
-    <div class="container-fluid p-5">
+<section class="login-form-section">
+    <div class="container-fluid ">
         <div class="row">
             <div class="col-md-e"></div>
-            <div class="col-md-6 p-5 bg-dark text-light text-center">
+            <div class="col-md-6 p-5 bg-light text-dark text-center">
                 <h3>Login</h3>
+                <p class="text-center">Don't have an account with us yet?</p>
                 <li><a href="signup.html">Signup</a></li>
                 <form method="POST">
                     {% csrf_token %}
@@ -50,7 +48,6 @@
                     <div class="form-group">
                        <input type="password" name="password" placeholder="********">
                     </div>
-                   
                     <button type="submit" class="btn-info">Login</button>
                     {% if messages %}
                     <ul class="pt-2 text-center">
