@@ -31,16 +31,16 @@
     </nav>
 </div>
   
- <!-- <div class="hero-section">
+ <div class="hero-section">
     <div class="hero-img">
         <img src="{% static 'images/bread-hero.jpg' %}" alt="bread image">
     </div>
- </div> -->
+ </div>
 <section class="singup-form-section nav-items">
     <div class="container-fluid signup-container">
         <div class="">
             <div class="col-md-e"></div>
-            <div class="p-5 bg-light text-dark text-center">
+            <div class="form-blur text-center p-5">
                 <h3>Signup</h3>
                 <li><a href="login.html" class="text-center">login</a></li>
                 <form method="POST">
@@ -55,7 +55,7 @@
                             {{ field }}
                         </div>
                         {% if field.help_text %}
-                            <small style="color: gray">{{ field.help_text }}</small>
+                            <small style="color: black">{{ field.help_text }}</small>
                         {% endif %}
                     </div>
                     {% endfor %}

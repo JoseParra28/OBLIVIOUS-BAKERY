@@ -31,50 +31,50 @@
     </nav>
 </div>
   
- <div class="hero-section">
+ <!-- <div class="hero-section">
     <div class="hero-img">
         <img src="{% static 'images/order-list-img.jpg' %}" alt="bread image 2" style="height: 10%;">
     </div>
- </div>
+ </div> -->
  
  <!-- ----------------------orders  -->
-<div class="container-fluid m-4">
+<div class="orders-container-fluid">
     {% if user.is_authenticated %}
     <h2 class="welcome-msg">
         Welcome {{ user.username }}
     </h2>
     {% endif %} 
-    <div class="row">
-        <div class="col-md-7 text-center">
+    <div class="/row/">
+        <div class="/col-md-7/ ">
             <h2>Orders</h2>
-            <div class="row">
-                <div class="col-md-4" id="ord-name">
+            <div class="/row/">
+                <div class="colum" id="ord-name">
                     <h3>Name</h3>
                 </div>
-                <div class="col-md-4" >
-                    <div class="col-md-4" id="ord-size">
+                <div class="/col-md-4/" >
+                    <div class="colum" id="ord-size">
                     <h3>size</h3>
                 </div>
-                <div class="col-md-6" id="ord-price">
+                <div class="colum" id="ord-price">
                     <h3>price</h3>
                 </div>
             </div>
             <h2 id="total-bill"> your order total:</h2>
         </div> 
         <!-- remove item button -->
-        <div class="col-md-1 btn-danger" id="rm"></div>
+        <div class="/col-md-1 btn-danger/" id="rm"></div>
 
         <!-- add a message section -->
-        <div class="col-md-4 mt-2">
+        <div class="/col-md-4 mt-2/">
             <h2>please add a message to customize your order. </h2>
             <textarea name="message" id="message" cols="30" rows="8"></textarea>
 
             {% if user.is_authenticated %}
-            <div class="ml-auto m-4">
+            <div class="/ml-auto m-4/">
                 <button type="submit" class="submit-order-btn" onclick="order()"> Submit </button>
             </div>
             {% else %}
-            <div class="ml-auto m-4">
+            <div class="/ml-auto m-4/">
                 <a href="login.html"><i class="fa fa-user"></i> Log in</a>
             </div>
             {% endif %} 
