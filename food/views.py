@@ -89,7 +89,11 @@ def signInView(request):
     return render(request, 'food/login.html', ctx)
 
 
+# def logOut(request):
+#     request.session.set_expiry(0)
+#     ctx = {'name': 'OBLIVIOUS BAKERY'}
+#     return render(request, "food/logout.html", ctx)
+
 def logOut(request):
-    request.session.set_expiry(0)
-    ctx = {'name': 'OBLIVIOUS BAKERY'}
-    return render(request, "food/logout.html", ctx)
+    logout(request)
+    return redirect('index')
