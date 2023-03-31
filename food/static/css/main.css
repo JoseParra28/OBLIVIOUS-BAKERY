@@ -144,3 +144,13 @@ li {
     height: 70vh;
     padding-bottom: 15%;
 }
+/* -----------------------------------susscess page */
+.susscess-msg, p {
+    position: absolute;
+    top: 30%;
+    display: flex;
+}
+#cancel-text {
+    top: 50%;
+    padding: 16%;
+}

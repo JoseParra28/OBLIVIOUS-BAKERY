@@ -41,7 +41,14 @@
                 {% if user.is_authenticated %}
                 <li><a href="logout.html"><i class="fa-solid fa-arrow-right-from-bracket"></i></a></li>
                 {% else %}
-                <li><a href="login.html"><i class="fa fa-user"></i></a></li>
+
+                <li class="logged-user">
+                    {% if user.is_authenticated %}
+                    <p class="welcome-msg">
+                        Welcome {{ user.username }}
+                    </p>
+                    {% endif %} 
+                </li>
 
                 {% endif %} 
 

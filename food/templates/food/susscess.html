@@ -28,10 +28,20 @@
     </nav>
 </div>
 
-<h2 class="susscess-msg">Thank you! We have received your order.</h2>
-<p>If you wish to change or cancel your ordwer please contact us on: 01948893</p>
-<h3>{{ donut }}</h3>
- 
+
+<div class="container-fluid m-4">
+    <h2 class="susscess-msg">Thank you for you order, {{ user.username }}.  We have received your order:</h2>
+
+<h3>{{ order.note }}</h3>
+<p id="cancel-text">If you wish to change or cancel your ordwer please contact us on: 01948893</p>
+   
+   
+        </div> 
+        <!-- {% if user.is_authenticated %}
+        <h2 class="welcome-msg">
+             {{ user.username }}
+        </h2>
+        {% endif %}  -->
 
 <script src="{% static 'javascript/shopping-cart.js' %}"></script>
 <!-- <script src="{% static 'javascript/main.js' %}"></script> -->
