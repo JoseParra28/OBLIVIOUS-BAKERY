@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
-from .models import Pie, Cake, Donut, Order, Item
+from .models import Pie, Cake, Donut, Order, Item, Review
 from django.contrib.auth.forms import UserCreationForm
 from .forms import NewUserForm
 from django.contrib.auth import authenticate, login, logout
@@ -18,7 +18,9 @@ def randomOrderNumber(length):
 
 def index(request):
     request.session.set_expiry(0)
-    ctx = {'name': 'OBLIVIOUS BAKERY'}
+    review = Review.objects.all()
+    ctx = {'review': review}
+    print(review)
     return render(request, "food/index.html", ctx)
 
 

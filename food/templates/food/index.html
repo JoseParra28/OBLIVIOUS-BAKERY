@@ -66,6 +66,17 @@
     <div class="review-div">
         <h3 class="add-review">
             Add a review here
+            {{ review. }}
+            <table>
+            {% for review in review %}
+            <tr>
+                <td>{{ review.reviewer }}</td>
+                <td>{{ review.review_area }}</td>
+            </tr>
+
+
+        </table>
+            {% endfor %}
         </h3>
     </div>
 </div>
