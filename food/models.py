@@ -41,4 +41,16 @@ class Item(models.Model):
     size = models.CharField(max_length=5)
 
 
+class Review(models.Model):
+    review = models.ForeignKey(Pie, related_name="reviews", on_delete=models.CASCADE)
+    reviewer = models.CharField(max_length=200)
+    review_area = models.TextField()
+    date_added = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return (self.pie.name, self.reviewer)
+
+
+
+
 
