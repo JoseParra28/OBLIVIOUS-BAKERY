@@ -68,5 +68,6 @@ function removeItem(n){
     localStorage.setItem('total', total);
 
     shoppingCart();
+    
 }
 

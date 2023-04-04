@@ -26,7 +26,7 @@ class Donut(models.Model):
     p_image = models.URLField()    
 
 
-class Order (models.Model):
+class Order(models.Model):
     customer = models.ForeignKey(User, on_delete=models.CASCADE)
     number = models.CharField(max_length=50)
     receipt = models.DecimalField(max_digits=4, decimal_places=2)

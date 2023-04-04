@@ -63,10 +63,19 @@ def order(request):
     if request.is_ajax():
         request.session['note'] = request.POST.get('note')
         request.session['order'] = request.POST.get('orders')
-
-
-        print(request.session['note'], request.session['order'])
-        
+        orders = json.loads(request.session['order'])
+        request.session['total'] = request.POST.get('total')
+        if request.user.is_authenticated:
+            order = Order(customer=request.user, number=randomOrderNumber(6), receipt=float(request.session['total']), notes=request.session['note'])
+            order.save()
+            for article in orders:
+                item = Item(
+                    order=order,
+                    name=article[0],
+                    price=float(article[2]),
+                    size=article[1]
+                )
+                item.save()       
     ctx = {'active_link': 'order-list'}
     return render(request, "food/order-list.html", ctx)
 
