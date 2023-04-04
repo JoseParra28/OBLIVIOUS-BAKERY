@@ -1,6 +1,8 @@
 let pCart = document.querySelector('#p-cart');
 let pTotal = document.querySelector('#p-total');
 
+
+
 // add pie function
 function addPie(pie){
     //  pie name info 
@@ -27,7 +29,8 @@ function addPie(pie){
     orders[cartSize] = [name, size, price];
     localStorage.setItem('orders', JSON.stringify(orders));
    
-    total = Number(total) + Number(price);
+    total = Number(0) + Number(0);
+    console.log(price, "<==------------------------------------=total")
     localStorage.setItem('total', total);
 
     // updating order 
@@ -35,7 +38,7 @@ function addPie(pie){
     trolley.innerHTML = orders.length;
 
     btn = '<button class="remove-btn onclick="removeItemPie(' + cartSize + ')>Remove</button>';
-    pTotal.innerHTML = 'Total ' + total + ' £';
+    pTotal.innerHTML = 'Total ' + total + ' ';
     pCart.innerHTML += '<li>' + name + ' ' + size + ' : ' + price + ' ' + btn +'</li>';
     
 }

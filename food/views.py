@@ -68,11 +68,11 @@ def order(request):
         if request.user.is_authenticated:
             order = Order(customer=request.user, number=randomOrderNumber(6), receipt=float(request.session['total']), notes=request.session['note'])
             order.save()
-            for article in orders:
+            for order in orders:
                 item = Item(
                     order=order,
                     name=article[0],
-                    price=float(article[2]),
+                    price=float("2"),
                     size=article[1]
                 )
                 item.save()       
@@ -109,8 +109,8 @@ def signInView(request):
         username = request.POST.get('username')
         pwd = request.POST.get('password')
         user = authenticate(request, username='username', password='pwd')
-        if user is not None:
-            signInView(request, user)
+        if username is not None:
+            request, user
             return redirect('index')
         else:
             messages.info(request, 'Username and/or password are not correct')
@@ -119,11 +119,6 @@ def signInView(request):
     ctx = {'active_link': 'login'}
     return render(request, 'food/login.html', ctx)
 
-
-# def logOut(request):
-#     request.session.set_expiry(0)
-#     ctx = {'name': 'OBLIVIOUS BAKERY'}
-#     return render(request, "food/logout.html", ctx)
 
 def logOut(request):
     logout(request)
