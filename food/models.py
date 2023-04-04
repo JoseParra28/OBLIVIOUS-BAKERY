@@ -47,7 +47,6 @@ class Review(models.Model):
     review_area = models.TextField(max_length=20, null=False, blank=False)
     date_added = models.DateTimeField(auto_now_add=True)
 
-
     def __str__(self):
         return str(self.id)
 

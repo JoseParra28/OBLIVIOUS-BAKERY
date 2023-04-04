@@ -1,19 +1,19 @@
-// const hours = 24;
-// const now = new DateGetTime();
-// const stepTime = localStorage.getItem('stepTime');
+const hours = 24;
+const now = new Date().GetTime();
+const stepTime = localStorage.getItem('stepTime');
 
-// if (stepTime == null){
-//     localStorage.getItem('StepTime', now);
-// }
-// else {
-//     if (now - stepTime > hours*60*60*1000){
-//         localStorage.clear();
-//         localStorage.setItem('stepTime', now);
-//     }
-// }
+if (stepTime == null){
+    localStorage.getItem('StepTime', now);
+}
+else {
+    if (now - stepTime > hours*60*60*1000){
+        localStorage.clear();
+        localStorage.setItem('stepTime', now);
+    }
+}
 
-const orders = JSON.parse(localStorage.getItem('orders'));
-const total = localStorage.getItem('total');
+let orders = JSON.parse(localStorage.getItem('orders'));
+let total = localStorage.getItem('total');
 
 if (orders == null || orders === undefined){
     localStorage.setItem('orders', JSON.stringify([]));
@@ -25,7 +25,7 @@ if (total == null || total === undefined){
     total = localStorage.getItem('orders');
 }
 
-const trolley = document.querySelector('#trolley');
+let trolley = document.querySelector('#trolley');
 trolley.innerHTML = orders.length;
 
 

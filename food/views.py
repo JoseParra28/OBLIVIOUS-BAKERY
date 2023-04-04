@@ -129,20 +129,3 @@ def logOut(request):
     logout(request)
     return redirect('index')
 
-    # if request.is_ajax():
-    #     request.session.set_expiry(0)
-    #     note = request.session['note'] = request.POST.get('note')
-    #     orders = request.session['orders'] = request.POST.get('orders')
-    #     orders = json.loads(request.session['orders'])
-    #     totall = request.session['totall'] = request.POST.get('totall')
-    #     if request.user.is_authenticated:
-    #         order = Order(customer=request.user, number=randomOrderNumber(6), totall=float(request.session['totall']), note=request.session['note'])
-    #         order.save()
-    #         for article in orders:
-    #             item = Item(
-    #                 order=order, 
-    #                 name=article[0],
-    #                 price=float(article[2]),
-    #                 size=article[1]
-    #             )
-    #             item.save()

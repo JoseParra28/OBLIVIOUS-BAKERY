@@ -1,5 +1,5 @@
-const pCart = document.querySelector('#p-cart');
-const pTotal = document.querySelector('#p-total');
+let pCart = document.querySelector('#p-cart');
+let pTotal = document.querySelector('#p-total');
 
 // add pie function
 function addPie(pie){
@@ -31,7 +31,7 @@ function addPie(pie){
     localStorage.setItem('total', total);
 
     // updating order 
-    const trolley = document.querySelector('#trolley');
+    let trolley = document.querySelector('#trolley');
     trolley.innerHTML = orders.length;
 
     btn = '<button class="remove-btn onclick="removeItemPie(' + cartSize + ')>Remove</button>';
@@ -61,7 +61,7 @@ function removeItem(n){
     orders.splice(n,1);
 
      // updating order 
-     const trolley = document.querySelector('#trolley');
+     let trolley = document.querySelector('#trolley');
      trolley.innerHTML = orders.length;
 
     localStorage.setItem('orders', JSON.stringify(orders));
