@@ -24,6 +24,15 @@ def index(request):
     return render(request, "food/index.html", ctx)
 
 
+def review(request):
+    if request.method == 'POST':
+        reviewer = request.POST.get('item_name')
+        review_area = request.POST.get('item_text')
+        Review.objects.create(reviewer=reviewer, review_area=review_area)
+        return redirect('index')
+    return render(request, "food/add-review.html") 
+
+
 def pie(request):
     request.session.set_expiry(0)
     pies = Pie.objects.all()
@@ -50,31 +59,23 @@ def donut(request):
 
 @csrf_exempt
 def order(request):
+    request.session.set_expiry(0)
     if request.is_ajax():
-        request.session.set_expiry(0)
-        note = request.session['note'] = request.POST.get('note')
-        orders = request.session['orders'] = request.POST.get('orders')
-        orders = json.loads(request.session['orders'])
-        totall = request.session['totall'] = request.POST.get('totall')
-        if request.user.is_authenticated:
-            order = Order(customer=request.user, number=randomOrderNumber(6), totall=float(request.session['totall']), note=request.session['note'])
-            order.save()
-            for article in orders:
-                item = Item(
-                    order=order, 
-                    name=article[0],
-                    price=float(article[2]),
-                    size=article[1]
-                )
-                item.save()
+        request.session['note'] = request.POST.get('note')
+        request.session['order'] = request.POST.get('orders')
+
+
+        print(request.session['note'], request.session['order'])
+        
     ctx = {'active_link': 'order-list'}
     return render(request, "food/order-list.html", ctx)
 
 
 def susscess(request):
-    order = request.session['orders']
+    request.session.set_expiry(0)
+    order = request.session['order']
     ctx = {'order': order}
-    return render(request, 'food/susscess.html')    
+    return render(request, 'food/susscess.html', ctx)    
 
 
 def signup(request):
@@ -118,3 +119,21 @@ def signInView(request):
 def logOut(request):
     logout(request)
     return redirect('index')
+
+    # if request.is_ajax():
+    #     request.session.set_expiry(0)
+    #     note = request.session['note'] = request.POST.get('note')
+    #     orders = request.session['orders'] = request.POST.get('orders')
+    #     orders = json.loads(request.session['orders'])
+    #     totall = request.session['totall'] = request.POST.get('totall')
+    #     if request.user.is_authenticated:
+    #         order = Order(customer=request.user, number=randomOrderNumber(6), totall=float(request.session['totall']), note=request.session['note'])
+    #         order.save()
+    #         for article in orders:
+    #             item = Item(
+    #                 order=order, 
+    #                 name=article[0],
+    #                 price=float(article[2]),
+    #                 size=article[1]
+    #             )
+    #             item.save()

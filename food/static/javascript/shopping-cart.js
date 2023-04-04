@@ -42,30 +42,49 @@ function removeItem(n){
     shoppingCartTotal();
 }
 // Ajax
-let note = document.querySelector('#message')
+// let note = document.querySelector('#message')
 
 
- function order(){
+//  function order(){
+//     let msg = note.value;
+//     let orders = localStorage.getItem('orders')
+//     let totall = localStorage.getItem('totall')
+
+
+//     let url = 'food/shopping-cart';
+//     let orderData = {};
+//     orderData['orders'] = orders;
+//     orderData['note'] = msg;
+//     orderData['bill'] = totall;
+//     $.ajax({
+//         urls:url,
+//         type: "POST",
+//         data: orderData,
+//         success: function(data){
+//             window.location.replace('/susscess.html');
+//             localStorage.setItem('orders', JSON.stringify([]));
+//             localStorage.setItem('total', 0);
+//             console.log("The data was sent")
+//         }
+//     })
+
+//  }
+
+let note = document.querySelector('#message');
+
+function order(){
     let msg = note.value;
     let orders = localStorage.getItem('orders')
-    let totall = localStorage.getItem('totall')
-
-
-    let url = 'food/shopping-cart';
+    let ur = 'order-list.html';
     let orderData = {};
     orderData['orders'] = orders;
     orderData['note'] = msg;
-    orderData['bill'] = totall;
     $.ajax({
-        urls:url,
+        url: ur,
         type: "POST",
         data: orderData,
-        success: function(data){
-            window.location.replace('/susscess.html');
-            localStorage.setItem('orders', JSON.stringify([]));
-            localStorage.setItem('total', 0);
-            console.log("The data was sent")
+        success: function (data){
+            window.location.replace('susscess.html')
         }
     })
-
- }
+}
