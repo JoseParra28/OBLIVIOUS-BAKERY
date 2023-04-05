@@ -25,8 +25,14 @@ def index(request):
 
 def add_item(request):
     request.session.set_expiry(0)
-   
-    return render(request, "food/add-item.html")
+    ctx = {}
+    if request.method == 'POST':
+        name = request.POST.get('item_name')
+        done = 'done' in request.POST
+        Itemm.objects.create(name=name, done=done)
+
+        return redirect('index')
+    return render(request, "food/add-item.html", ctx)
 
 
 def pie(request):
