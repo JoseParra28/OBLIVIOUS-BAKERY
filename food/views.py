@@ -18,19 +18,11 @@ def randomOrderNumber(length):
 
 def index(request):
     request.session.set_expiry(0)
-    review = Review.objects.all()
-    ctx = {'review': review}
-    print(review)
+    reviews = Review.objects.all()
+    ctx = {
+        'reviews': reviews
+    }
     return render(request, "food/index.html", ctx)
-
-
-def review(request):
-    if request.method == 'POST':
-        reviewer = request.POST.get('item_name')
-        review_area = request.POST.get('item_text')
-        Review.objects.create(reviewer=reviewer, review_area=review_area)
-        return redirect('index')
-    return render(request, "food/add-review.html") 
 
 
 def pie(request):
@@ -68,7 +60,7 @@ def order(request):
         if request.user.is_authenticated:
             order = Order(customer=request.user, number=randomOrderNumber(6), receipt=float(request.session['total']), notes=request.session['note'])
             order.save()
-            for order in orders:
+            for article in orders:
                 item = Item(
                     order=order,
                     name=article[0],
@@ -110,7 +102,7 @@ def signInView(request):
         pwd = request.POST.get('password')
         user = authenticate(request, username='username', password='pwd')
         if username is not None:
-            request, user
+            request, username
             return redirect('index')
         else:
             messages.info(request, 'Username and/or password are not correct')
@@ -123,4 +115,3 @@ def signInView(request):
 def logOut(request):
     logout(request)
     return redirect('index')
-

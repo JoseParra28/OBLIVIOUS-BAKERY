@@ -38,7 +38,9 @@ admin.site.register(Item, Item_admin)
 
 
 class Review_admin(admin.ModelAdmin):
-    list_display = ('review', 'reviewer', 'review_area', 'date_added')
+    list_display = ('user', 'review', 'done', 'date_added')
 
 
 admin.site.register(Review, Review_admin)
+
+

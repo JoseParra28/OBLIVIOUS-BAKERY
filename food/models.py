@@ -42,13 +42,24 @@ class Item(models.Model):
 
 
 class Review(models.Model):
-    review = models.ForeignKey(User, related_name="reviews", on_delete=models.CASCADE)
-    reviewer = models.CharField(max_length=20, null=False, blank=False)
-    review_area = models.TextField(max_length=20, null=False, blank=False)
+    user = models.ForeignKey(User, related_name="reviews", on_delete=models.CASCADE)
+    review = models.CharField(max_length=200, null=False, blank=False)
+    done = models.BooleanField(null=False, blank=False)
     date_added = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
-        return str(self.id)
+        return self.review
+
+
+
+# class Review(models.Model):
+#     review = models.ForeignKey(User, related_name="reviews", on_delete=models.CASCADE)
+#     reviewer = models.CharField(max_length=20, null=False, blank=False)
+#     review_area = models.TextField(max_length=20, null=False, blank=False)
+#     date_added = models.DateTimeField(auto_now_add=True)
+
+#     def __str__(self):
+#         return str(self.id)
 
 
 
