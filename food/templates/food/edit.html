@@ -57,24 +57,24 @@
         </nav>
     </div>
   
- <!-- <div class="hero-section">
-    <div class="hero-img">
-        <img src="{% static 'images/bread-hero.jpg' %}" alt="bread image">
-    </div>
-</div> -->
 
-<h1>add item</h1>
+
+<h1>edit item</h1>
 
 <form method="POST" class="add-item-form">
     {% csrf_token %}
-    {{ form.as_p }}
-   
-<div>
-    <p>
-        <button type="submit">Add item</button>
-    </p>
-</div>
-</form>
+    <h1>Edit item</h1>
+
+    <form method="POST" class="add-item-form">
+        {% csrf_token %}
+        {{ form.as_p }}
+    <div>
+        <p>
+            <button type="submit">update</button>
+        </p>
+    </div>
+    </form>
+    
 
 
 

@@ -1,8 +1,8 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from django.http import HttpResponse
 from .models import Pie, Cake, Donut, Order, Item, Itemm
 from django.contrib.auth.forms import UserCreationForm
-from .forms import NewUserForm
+from .forms import NewUserForm, ItemForm
 from django.contrib.auth import authenticate, login, logout
 from django.views.decorators.csrf import csrf_exempt
 from django.contrib import messages
@@ -25,14 +25,22 @@ def index(request):
 
 def add_item(request):
     request.session.set_expiry(0)
-    ctx = {}
     if request.method == 'POST':
-        name = request.POST.get('item_name')
-        done = 'done' in request.POST
-        Itemm.objects.create(name=name, done=done)
-
+        form = ItemForm(request.POST)
+        if form.is_valid():
+            form.save()
         return redirect('index')
+    form = ItemForm()
+    ctx = {'form': form}    
     return render(request, "food/add-item.html", ctx)
+
+
+def edit_item(request, item_id):
+    item = get_object_or_404(Itemm, id=item_id)
+    form = ItemForm(instance=item)
+    ctx = {'form': form}  
+
+    return render(request, 'food/edit.html'. ctx)    
 
 
 def pie(request):

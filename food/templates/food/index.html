@@ -24,6 +24,7 @@
             <ul class="nav-items">
                 <li><a href="index.html">home</a></li>
                 <li><a href="pie.html">pies</a></li>
+                <li><a href="edit.html">edddit</a></li>
                 <li><a href="cakes.html">cakes</a></li>
                 <li><a href="donuts.html">donuts</a></li>
                 <li><a href="signup.html">Signup</a></li>
@@ -68,6 +69,9 @@
     <tr>
         <td>{{ itemm.name }}</td>
         <td>{{ itemm.done }}</td>
+        <td>
+            <a href="/edit/{{ item.id }}"><button>Edit</button></a>
+        </td>
     </tr>
     {% empty %}
     <tr>
