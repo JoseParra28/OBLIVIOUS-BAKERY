@@ -27,6 +27,7 @@
                 <li><a href="cakes.html">cakes</a></li>
                 <li><a href="donuts.html">donuts</a></li>
                 <li><a href="signup.html">Signup</a></li>
+                <li><a href="add-review.html">add review</a></li>
                 <li><a href="login.html"><i class="fa fa-user"></i></a></li>
                 <li><a href="order-list.html"><i class="fa fa-basket-shopping"></i><span id="trolley">0</span></a></li>
                
@@ -61,34 +62,34 @@
         <img src="{% static 'images/bread-hero.jpg' %}" alt="bread image">
     </div>
 </div> -->
-<!-- --------------review section -->
-<div class="col-md-4">
-    <div class="review-div">
-        <h3 class="add-review">
-            Add a review here
-        </h3>
-        <form method="POST" class="review-form">
-            {% csrf_token %}
-            <div>
-                <p>
-                    <label for="id_name">Name:</label>
-                    <input type="text" name="item_name" id="id_name">
-                </p>
-            </div>
-            <div>
-                <label for="id_text">Your review</label>
-                <textarea name="item_text" id="id_text" cols="30" rows="10"></textarea>
-            </div>
-            <div>
-                <p>
-                <button type="submit">Submit review</button>
-            </p>
-            </div>
 
-        </form>
-       
+<h1>add item</h1>
+
+<form method="POST" action="add">
+    {% csrf_token %}
+    <div>
+        <p>
+            <label for="id_name">name</label>
+            <input type="text" id="id_name" name="item_name">
+        </p>
     </div>
+    <div>
+        <p>
+            <label for="id_name">done</label>
+            <input type="checkbox" id="id_done" name="done">
+        </p>
+    </div>
+<div>
+    <p>
+        <button type="submit">Add item</button>
+    </p>
 </div>
+</form>
+
+
+
+
+     
    
 
  <!-- <script src="{% static 'javascript/orders.js' %}"></script> -->
@@ -97,15 +98,3 @@
 
 </body>
 </html>
-<!-- <h3 class="add-review">
-    Add a review here
-    
-    <table>
-    {% for review in review %}
-    <tr>
-        <td>{{ review.reviewer }}</td>
-        <textarea name="review" id="review-area" cols="30" rows="10">{{ review.review_area }}</textarea>
-    </tr>
-</table>
-    {% endfor %}
-</h3> -->

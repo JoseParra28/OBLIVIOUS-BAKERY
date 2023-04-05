@@ -17,7 +17,7 @@ from django.contrib import admin
 from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
-from food.views import index, pie, cakes, donut, order, signup, signInView, logOut, susscess
+from food.views import index, pie, cakes, donut, order, signup, signInView, logOut, susscess, add_item
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -30,7 +30,7 @@ urlpatterns = [
     path('login.html', signInView, name="signin-page"),
     path('logout.html', logOut, name="logout-page"),
     path('susscess.html', susscess, name="susscess-page"),
-    # path('add-review.html', review, name="review-page"),
+    path('add-item.html', add_item, name="add-item-page"),
     path('index.html', index, name="index"),
     
 ]

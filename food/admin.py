@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Pie, Cake, Donut, Order, Item, Review
+from .models import Pie, Cake, Donut, Order, Item, Itemm
 
 
 class Pie_admin(admin.ModelAdmin):
@@ -37,10 +37,13 @@ class Item_admin(admin.ModelAdmin):
 admin.site.register(Item, Item_admin)
 
 
-class Review_admin(admin.ModelAdmin):
-    list_display = ('user', 'review', 'done', 'date_added')
+class Itemm_admin(admin.ModelAdmin):
+    list_display = ('name', 'done')
 
 
-admin.site.register(Review, Review_admin)
+admin.site.register(Itemm, Itemm_admin)
+
+
+
 
 

@@ -41,28 +41,9 @@ class Item(models.Model):
     size = models.CharField(max_length=5)
 
 
-class Review(models.Model):
-    user = models.ForeignKey(User, related_name="reviews", on_delete=models.CASCADE)
-    review = models.CharField(max_length=200, null=False, blank=False)
-    done = models.BooleanField(null=False, blank=False)
-    date_added = models.DateTimeField(auto_now_add=True)
+class Itemm(models.Model):
+    name = models.CharField(max_length=50, null=False, blank=False)
+    done = models.BooleanField(null=False, blank=False, default=False)
 
     def __str__(self):
-        return self.review
-
-
-
-# class Review(models.Model):
-#     review = models.ForeignKey(User, related_name="reviews", on_delete=models.CASCADE)
-#     reviewer = models.CharField(max_length=20, null=False, blank=False)
-#     review_area = models.TextField(max_length=20, null=False, blank=False)
-#     date_added = models.DateTimeField(auto_now_add=True)
-
-#     def __str__(self):
-#         return str(self.id)
-
-
-
-
-
-
+        return self.name
