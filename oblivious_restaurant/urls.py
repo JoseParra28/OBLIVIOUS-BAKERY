@@ -17,21 +17,22 @@ from django.contrib import admin
 from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
-from food.views import index, pie, cakes, donut, order, signup, signInView, logOut, susscess, add_item, edit_item
+from food import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', index, name="index_page"),
-    path('pie.html', pie, name='pie_page'),
-    path('cakes.html', cakes, name="cakes_page"),
-    path('donuts.html', donut, name="donuts_page"),
-    path('order-list.html', order, name="orders-page"),
-    path('signup.html', signup, name="signup-page"),
-    path('login.html', signInView, name="signin-page"),
-    path('logout.html', logOut, name="logout-page"),
-    path('susscess.html', susscess, name="susscess-page"),
-    path('add-item.html', add_item, name="add-item-page"),
-    path('edit/<itemm_id>', edit_item, name="edit-item-page"),
-    path('index.html', index, name="index"),
+    path('', views.index, name="index_page"),
+    path('pie.html', views.pie, name='pie_page'),
+    path('cakes.html', views.cakes, name="cakes_page"),
+    path('donuts.html', views.donut, name="donuts_page"),
+    path('order-list.html', views.order, name="orders-page"),
+    path('signup.html', views.signup, name="signup-page"),
+    path('login.html', views.signInView, name="signin-page"),
+    path('logout.html', views.logOut, name="logout-page"),
+    path('susscess.html', views.susscess, name="susscess-page"),
+    path('add-item.html', views.add_item, name="add-item-page"),
+    path('edit/<itemm_id>', views.edit_item, name="edit-item-page"),
+    path('delete/<itemm_id>', views.delete_item, name="delete-item-page"),
+    path('index.html', views.index, name="index"),
     
 ]

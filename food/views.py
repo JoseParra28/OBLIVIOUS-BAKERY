@@ -44,7 +44,13 @@ def edit_item(request, itemm_id):
         return redirect('index')
     form = ItemForm(instance=item)
     ctx = {'form': form}    
-    return render(request, 'food/edit.html', ctx)    
+    return render(request, 'food/edit.html', ctx)   
+
+
+def delete_item(request, itemm_id):
+    item = get_object_or_404(Itemm, id=itemm_id)
+    item.delete()
+    return redirect('index')    
 
 
 def pie(request):
