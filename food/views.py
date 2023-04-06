@@ -130,7 +130,7 @@ def signInView(request):
         pwd = request.POST.get('password')
         user = authenticate(request, username='username', password='pwd')
         if username is not None:
-            request, username
+            request, user
             return redirect('index')
         else:
             messages.info(request, 'Username and/or password are not correct')
