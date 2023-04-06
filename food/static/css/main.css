@@ -124,7 +124,7 @@
 
 /* ---------------------------------------About preview */
 .about-preview {
-    height: 80vh;
+    height: 130vh;
     width: 100%;
     overflow: hidden;
     position: relative;
@@ -328,9 +328,13 @@ padding: 9%;
 }
 /* ----------------------------add item form */
 
-.add-item-form{
-    top: 132%;
-    position: relative;
+/* .add-item-form{
+    top: 43vh;
+    position: absolute;
+    display: flex;
+} */
+#id_name {
+    color: red;
 }
 /* --------------------------------------------footer */
 .footer__container {
@@ -381,3 +385,6 @@ flex-direction: column;
     justify-content: center;
     text-align: center;
 }
+/* .add-review {
+    position: inherit;
+} */

@@ -26,7 +26,7 @@
             <li><a href="cakes.html">cakes</a></li>
             <li><a href="donuts.html">donuts</a></li>
             <li><a href="signup.html">Signup</a></li>
-            <!-- <li><a href="add-item.html">add item</a></li> -->
+            <li><a href="">add item</a></li>
             <li><a href="login.html"><i class="fa fa-user"></i></a></li>
             <li><a href="order-list.html"><i class="fa fa-basket-shopping"></i><span id="trolley">0</span></a></li>
            
@@ -42,13 +42,13 @@
             <li><a href="logout.html"><i class="fa-solid fa-arrow-right-from-bracket"></i></a></li>
             {% else %}
 
-            <li class="logged-user">
+            <!-- <li class="logged-user">
                 {% if user.is_authenticated %}
                 <p class="welcome-msg">
                     Welcome {{ user.username }}
                 </p>
                 {% endif %} 
-            </li>
+            </li> -->
 
             {% endif %} 
 
@@ -71,16 +71,72 @@
   <!-- ------------------------------about section -->
   <div class="about-preview">
     <div class="about-img">
-        <img src="{% static 'images/blind-fold.jpg' %}" alt="smoked-dish-on-table">
+        <img src="{% static 'images/bread-hero.jpg' %}" alt="smoked-dish-on-table">
     </div>
     <div class="about-content">
     <h2>about us</h2>
     <p class="about-p">lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dumm
         lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dumm
     </p>
-    <button><a href="about.html">find out more</a></button>
 </div>
 </div>
+
+<!-- -------------------------reviews sections -->
+<section class="review-section">
+    <div class="review">
+        <div class="review-img">
+        </div>
+        <div class="review-content">
+        <h2>reviews</h2>
+        <p class="review-p">lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dumm
+            lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dumm
+        </p>
+        {% if user.is_authenticated %}
+        <a href="add-item.html"><button>Add a review</button></a>
+        {% else %}
+
+        {% endif %} 
+
+        <div class="crud">
+            <table>
+    {% for itemm in items %}
+    <tr>
+        
+        <td>{{ itemm.name }}</td>
+        <td>
+            {% if user.is_authenticated %}
+            <a href="/edit/{{ itemm.id }}">
+                <button>Edit</button>
+            </a>
+            {% else %}
+    
+            {% endif %} 
+            
+        </td>
+        <td>
+            {% if user.is_authenticated %}
+            <a href="/delete/{{ itemm.id }}">
+                <button>delete</button>
+            </a>
+        {% else %}
+
+        {% endif %} 
+           
+        </td>
+    </tr>
+    {% empty %}
+    <tr>
+        <td>No reviews yet</td>
+    </tr>
+    {% endfor %}
+</table>
+        </div>
+
+
+        
+    </div>
+</div>
+</section>
 
 <!-- ----------------------team section -->
 <section class="team-section">
@@ -157,21 +213,7 @@
         </div>
     </div>
 </section>
-<!-- -------------------------reviews sections -->
-<section class="review-section">
-    <div class="review">
-        <div class="review-img">
-            <img src="{% static 'images/chefs-table-hero-1.jpg' %}" alt="smoked-dish-on-table">
-        </div>
-        <div class="review-content">
-        <h2>private dinning</h2>
-        <p class="review-p">lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dumm
-            lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dumm
-        </p>
-        <button class="btn"><a href="contact.html">contact us</a></button>
-    </div>
-</div>
-</section>
+
 <!-- -------------------------footer -->
 <footer>
     <div class="logo-footer">
@@ -219,29 +261,7 @@
     </div>
 </footer>
 
-<!-- <table>
-    {% for itemm in items %}
-    <tr>
-        
-        <td>{{ itemm.name }}</td>
-        <td>{{ itemm.done }}</td>
-        <td>
-            <a href="/edit/{{ itemm.id }}">
-                <button>Edit</button>
-            </a>
-        </td>
-        <td>
-            <a href="/delete/{{ itemm.id }}">
-                <button>delete</button>
-            </a>
-        </td>
-    </tr>
-    {% empty %}
-    <tr>
-        <td>No reviews yet</td>
-    </tr>
-    {% endfor %}
-</table> -->
+
 
 
 
