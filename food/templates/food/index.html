@@ -13,60 +13,216 @@
     
 </head>
 <body>
-<!-- nav-bar -->
+<!-- ----------------------------------nav-bar -->
 <div class="wrapper">
     <nav class="nav-bar">
-    <div class="wrapper">
-        <nav class="nav-bar">
-            <div class="logo">
-                <img src="{% static 'images/oblivious-logo.jpg' %}" alt="image" class="logo-img" style="width: 110px; height: 100%;">
-            </div>
-            <ul class="nav-items">
-                <li><a href="index.html">home</a></li>
-                <li><a href="pie.html">pies</a></li>
-                <li><a href="edit.html">edddit</a></li>
-                <li><a href="cakes.html">cakes</a></li>
-                <li><a href="donuts.html">donuts</a></li>
-                <li><a href="signup.html">Signup</a></li>
-                <li><a href="add-item.html">add item</a></li>
-                <li><a href="login.html"><i class="fa fa-user"></i></a></li>
-                <li><a href="order-list.html"><i class="fa fa-basket-shopping"></i><span id="trolley">0</span></a></li>
-               
-               
-                <li class="logged-user">
-                    {% if user.is_authenticated %}
-                    <p class="welcome-msg">
-                        Welcome {{ user.username }}
-                    </p>
-                    {% endif %} 
-                </li>
+        <div class="logo">
+            <img src="{% static 'images/oblivious-logo.jpg' %}" alt="image" class="logo-img" style="width: 110px; height: 100%;">
+        </div>
+        <ul class="nav-items">
+            <li><a href="index.html">home</a></li>
+            <li><a href="pie.html">pies</a></li>
+            <!-- <li><a href="edit.html">edddit</a></li> -->
+            <li><a href="cakes.html">cakes</a></li>
+            <li><a href="donuts.html">donuts</a></li>
+            <li><a href="signup.html">Signup</a></li>
+            <!-- <li><a href="add-item.html">add item</a></li> -->
+            <li><a href="login.html"><i class="fa fa-user"></i></a></li>
+            <li><a href="order-list.html"><i class="fa fa-basket-shopping"></i><span id="trolley">0</span></a></li>
+           
+           
+            <li class="logged-user">
                 {% if user.is_authenticated %}
-                <li><a href="logout.html"><i class="fa-solid fa-arrow-right-from-bracket"></i></a></li>
-                {% else %}
-
-                <li class="logged-user">
-                    {% if user.is_authenticated %}
-                    <p class="welcome-msg">
-                        Welcome {{ user.username }}
-                    </p>
-                    {% endif %} 
-                </li>
-
+                <p class="welcome-msg">
+                    Welcome {{ user.username }}
+                </p>
                 {% endif %} 
+            </li>
+            {% if user.is_authenticated %}
+            <li><a href="logout.html"><i class="fa-solid fa-arrow-right-from-bracket"></i></a></li>
+            {% else %}
 
-            </ul>
-        </nav>
+            <li class="logged-user">
+                {% if user.is_authenticated %}
+                <p class="welcome-msg">
+                    Welcome {{ user.username }}
+                </p>
+                {% endif %} 
+            </li>
+
+            {% endif %} 
+
+        </ul>
+    </nav>
+</div>
+<!-- ------------------Hero section -->
+
+<section>
+    <!-- hero  image -->
+    <div class="main-container">
+        <div class="hero-img">
+            <!-- <h1 class="hero-text">oblivious bakery</h1> -->
+            <img src="{% static 'images/hero-img.jpg' %}" alt="bread image">
+        </div>
+        
     </div>
-  
- <div class="hero-section">
-    <div class="hero-img">
-        <img src="{% static 'images/bread-hero.jpg' %}" alt="bread image">
+</section>
+ 
+  <!-- ------------------------------about section -->
+  <div class="about-preview">
+    <div class="about-img">
+        <img src="{% static 'images/blind-fold.jpg' %}" alt="smoked-dish-on-table">
+    </div>
+    <div class="about-content">
+    <h2>about us</h2>
+    <p class="about-p">lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dumm
+        lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dumm
+    </p>
+    <button><a href="about.html">find out more</a></button>
+</div>
+</div>
+
+<!-- ----------------------team section -->
+<section class="team-section">
+    <div class="experience-info">
+        <h2>meet the team</h2>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been thepecimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsu</p>
+    </div>
+    <div class="experience-container">
+        <div class="menu-card">
+            <div class="imgBx">
+                <img src="{% static 'images/restauranteur.jpg' %}" alt="card-image">
+            </div>
+            <div class="card-content">
+                <h3>Owner - Samantha Porter</h3>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 
+                    Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
+                    orem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when1500s,</p>
+            </div>
+        </div>
+        <div class="menu-card">
+            <div class="imgBx">
+                <img src="{% static 'images/executive-chef.jpg' %}" alt="card-image">
+            </div>
+            <div class="card-content">
+                <h3>head baker - Eric Chen</h3>
+                <p>Lorem Ipsum is simplyorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 
+                    Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
+                    orem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when1500s dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
+            </div>
+        </div>
+        <div class="menu-card">
+            <div class="imgBx">
+                <img src="{% static 'images/marketing-manager.jpg' %}" alt="card-image">
+            </div>
+            <div class="card-content">
+                <h3>marketing executive - Melisa copper</h3>
+                <p>Lorem Ipsum is simply dummy orem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 
+                    Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
+                    orem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when1500stext of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
+            </div>
+        </div>
+        <div class="menu-card">
+            <div class="imgBx">
+                <img src="{% static 'images/somelier.jpg' %}" alt="card-image">
+            </div>
+            <div class="card-content">
+                <h3>general manager - Brenda mcCartie </h3>
+                <p>Lorem Ipsum is simply dummy text oforem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 
+                    Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
+                    orem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when1500s the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
+            </div>
+        </div>
+        <div class="menu-card">
+            <div class="imgBx">
+                <img src="{% static 'images/sous-chef.jpg' %}" alt="card-image">
+            </div>
+            <div class="card-content">
+                <h3> chef - damian ramirez</h3>
+                <p>Lorem Ipsum is simply dummy text oforem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 
+                    Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
+                    orem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when1500s the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
+            </div>
+        </div>
+        <div class="menu-card">
+            <div class="imgBx">
+                <img src="{% static 'images/pastry-chef.jpg' %}" alt="card-image">
+            </div>
+            <div class="card-content">
+                <h3>executive pastry chef - vanessa lawless</h3>
+                <p>Lorem Ipsum is simply dummy text oforem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 
+                    Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
+                    orem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when1500s the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- -------------------------reviews sections -->
+<section class="review-section">
+    <div class="review">
+        <div class="review-img">
+            <img src="{% static 'images/chefs-table-hero-1.jpg' %}" alt="smoked-dish-on-table">
+        </div>
+        <div class="review-content">
+        <h2>private dinning</h2>
+        <p class="review-p">lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dumm
+            lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dumm
+        </p>
+        <button class="btn"><a href="contact.html">contact us</a></button>
     </div>
 </div>
+</section>
+<!-- -------------------------footer -->
+<footer>
+    <div class="logo-footer">
+        <img src="{% static 'images/oblivious-logo.jpg' %}" alt="image" class="logo-img" style="width: 138px;">
+   </div>
+    <div class="footer__container">
+        <div class="footer__links">
+            <div class="footer__link-wrap">
+                <div class="footer__items">
+                    <h2>About us</h2>
+                    <a href="/">How it works</a>
+                    <a href="/">Testimonials</a>
+                    <a href="/">Careers</a>
+                    <a href="/">Invesments</a>
+                    <a href="/">Terms or service</a>
+                </div>
+                <div class="footer__items">
+                    <h2>About us</h2>
+                    <a href="/">How it works</a>
+                    <a href="/">Testimonials</a>
+                    <a href="/">Careers</a>
+                    <a href="/">Invesments</a>
+                    <a href="/">Terms or service</a>
+                </div>
+            </div>
+            <div class="footer__link-wrap">
+                <div class="footer__items">
+                    <h2>About us</h2>
+                    <a href="/">How it works</a>
+                    <a href="/">Testimonials</a>
+                    <a href="/">Careers</a>
+                    <a href="/">Invesments</a>
+                    <a href="/">Terms or service</a>
+                </div>
+                <div class="footer__items">
+                    <h2>About us</h2>
+                    <a href="/">How it works</a>
+                    <a href="/">Testimonials</a>
+                    <a href="/">Careers</a>
+                    <a href="/">Invesments</a>
+                    <a href="/">Terms or service</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
 
 <!-- <table>
     {% for itemm in items %}
     <tr>
+        
         <td>{{ itemm.name }}</td>
         <td>{{ itemm.done }}</td>
         <td>

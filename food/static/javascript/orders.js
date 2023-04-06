@@ -30,7 +30,6 @@ function addPie(pie){
     localStorage.setItem('orders', JSON.stringify(orders));
    
     total = Number(0) + Number(0);
-    console.log(price, "<==------------------------------------=total")
     localStorage.setItem('total', total);
 
     // updating order 
