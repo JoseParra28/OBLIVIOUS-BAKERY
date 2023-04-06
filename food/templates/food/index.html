@@ -70,7 +70,9 @@
         <td>{{ itemm.name }}</td>
         <td>{{ itemm.done }}</td>
         <td>
-            <a href="/edit/{{ item.id }}"><button>Edit</button></a>
+            <a href="/edit/{{ itemm.id }}">
+                <button>Edit</button>
+            </a>
         </td>
     </tr>
     {% empty %}

@@ -31,7 +31,7 @@ urlpatterns = [
     path('logout.html', logOut, name="logout-page"),
     path('susscess.html', susscess, name="susscess-page"),
     path('add-item.html', add_item, name="add-item-page"),
-    path('edit.html', edit_item, name="edit-item-page"),
+    path('edit/<itemm_id>', edit_item, name="edit-item-page"),
     path('index.html', index, name="index"),
     
 ]

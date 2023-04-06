@@ -24,7 +24,7 @@ def index(request):
 
 
 def add_item(request):
-    request.session.set_expiry(0)
+    # request.session.set_expiry(0)
     if request.method == 'POST':
         form = ItemForm(request.POST)
         if form.is_valid():
@@ -35,12 +35,16 @@ def add_item(request):
     return render(request, "food/add-item.html", ctx)
 
 
-def edit_item(request, item_id):
-    item = get_object_or_404(Itemm, id=item_id)
+def edit_item(request, itemm_id):
+    item = get_object_or_404(Itemm, id=itemm_id)
+    if request.method == 'POST':
+        form = ItemForm(request.POST, instance=item)
+        if form.is_valid():
+            form.save()
+        return redirect('index')
     form = ItemForm(instance=item)
-    ctx = {'form': form}  
-
-    return render(request, 'food/edit.html'. ctx)    
+    ctx = {'form': form}    
+    return render(request, 'food/edit.html', ctx)    
 
 
 def pie(request):
