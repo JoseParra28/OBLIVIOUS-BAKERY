@@ -45,6 +45,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    background-color: var(--background-color);
     }
   /* ----------------------------------------------Header, logo and nav bar */
   nav{
@@ -98,6 +99,11 @@
         -moz-text-fill-color:transparent;
         font-size: 1.3rem;
     }
+    @media(max-width: 1200px){
+        .nav-bar {
+            display: grid;
+        }
+    }
 
 /* ---------------------------Hero section */
 .orders-container {
@@ -107,6 +113,7 @@
     left: 6%;
     height: 70%;
     width: 85%;
+
 }
 .hero-text {
     position: relative;
@@ -312,12 +319,16 @@ padding: 9%;
     padding: 16%;
 }
 /* ----------------------------add item form */
-
-/* .add-item-form{
+.add-review {
+    position: relative;
+    left: -40vh;
+    top: 30vh;
+}
+.add-item-form{
     top: 43vh;
     position: absolute;
     display: flex;
-} */
+}
 #id_name {
     color: red;
 }
