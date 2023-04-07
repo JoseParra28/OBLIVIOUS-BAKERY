@@ -1,14 +1,4 @@
-.experience-info{
-    width: 50%;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    left: 19%;
-}
-.experience-info p {
-    margin-left: 2%;
-    
-}
+
 .experience-container {
     position: relative;
     width: 124vh;
@@ -17,10 +7,11 @@
     align-items: center;
     flex-wrap: wrap;
 }
+
 .experience-container .menu-card {
     position: relative;
     width: 59vh;
-    height: 450px;
+    height: 360px;
     margin: 10px;
     padding: 15px;
     display: flex;
@@ -36,7 +27,7 @@
     max-width: 30vh;
 }
 .experience-container .menu-card .card-content {
-    margin-left: 35%;
+    margin-left: 20%;
     margin-top: 0%;
 }
 @media(max-width: 991px){
@@ -53,6 +44,34 @@
         max-width: 350px;
     }
 
+}
+/* ---------------------------------------About preview */
+.about-preview {
+    height: 47vh;
+    width: 100%;
+    top: 15vh;
+    overflow: hidden;
+    position: relative;
+    
+}
+.about-img {
+    display: flex;
+    justify-content: center;
+}
+.about-img img {
+    height: 80%;
+    width: 80%;
+    background-repeat: no-repeat;
+    position: inherit;
+    justify-content: center;
+    margin: 0px 35px 0px 35px;
+}
+
+.about-content {
+    display: block;
+    position: absolute;
+    margin: 4%;
+    padding-right: 40%;
 }
 /* --------------------------menu cards */
 .container-fluid {
