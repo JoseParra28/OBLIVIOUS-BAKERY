@@ -23,6 +23,11 @@ def index(request):
     return render(request, "food/index.html", ctx)
 
 
+def menu(request):
+    request.session.set_expiry(0)
+    return render(request, "food/menu.html")    
+
+
 def add_item(request):
     # request.session.set_expiry(0)
     if request.method == 'POST':

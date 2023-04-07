@@ -25,6 +25,7 @@ urlpatterns = [
     path('pie.html', views.pie, name='pie_page'),
     path('cakes.html', views.cakes, name="cakes_page"),
     path('donuts.html', views.donut, name="donuts_page"),
+    path('menu.html', views.menu, name="menu_page"),
     path('order-list.html', views.order, name="orders-page"),
     path('signup.html', views.signup, name="signup-page"),
     path('login.html', views.signInView, name="signin-page"),

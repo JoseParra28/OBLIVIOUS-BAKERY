@@ -21,16 +21,9 @@
         </div>
         <ul class="nav-items">
             <li><a href="index.html">home</a></li>
-            <li><a href="pie.html">pies</a></li>
-            <!-- <li><a href="edit.html">edddit</a></li> -->
-            <li><a href="cakes.html">cakes</a></li>
-            <li><a href="donuts.html">donuts</a></li>
+            <li><a href="menu.html">menu</a></li>
             <li><a href="signup.html">Signup</a></li>
-            <li><a href="">add item</a></li>
-            <li><a href="login.html"><i class="fa fa-user"></i></a></li>
-            <li><a href="order-list.html"><i class="fa fa-basket-shopping"></i><span id="trolley">0</span></a></li>
-           
-           
+            <li><a href="login.html">log in<i class="fa fa-user"></i></a></li>
             <li class="logged-user">
                 {% if user.is_authenticated %}
                 <p class="welcome-msg">
@@ -87,7 +80,7 @@
         <div class="review-img">
         </div>
         <div class="review-content">
-        <h2>reviews</h2>
+        <h2>reviews </h2>
         <p class="review-p">lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dumm
             lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dumm
         </p>
@@ -101,8 +94,8 @@
             <table>
     {% for itemm in items %}
     <tr>
-        
-        <td>{{ itemm.name }}</td>
+        <!-- <p style="text-transform: capitalize;">{{ user.username }} :  </p> -->
+        <td>{{ user.username }} : {{ itemm.name }}</td>
         <td>
             {% if user.is_authenticated %}
             <a href="/edit/{{ itemm.id }}">

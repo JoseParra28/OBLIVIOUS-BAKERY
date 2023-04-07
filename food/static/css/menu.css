@@ -1,3 +1,60 @@
+.experience-info{
+    width: 50%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    left: 19%;
+}
+.experience-info p {
+    margin-left: 2%;
+    
+}
+.experience-container {
+    position: relative;
+    width: 124vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.experience-container .menu-card {
+    position: relative;
+    width: 59vh;
+    height: 450px;
+    margin: 10px;
+    padding: 15px;
+    display: flex;
+    /* box-shadow: 6px 6px 6px 6px rgba(0, 0, 0, 0.4); */
+    border-radius: 4px;
+}
+.experience-container .menu-card .imgBx {
+    max-width: 150px;
+    flex: 0 0 150px ;
+
+}
+.experience-container .menu-card .imgBx img {
+    max-width: 30vh;
+}
+.experience-container .menu-card .card-content {
+    margin-left: 35%;
+    margin-top: 0%;
+}
+@media(max-width: 991px){
+    .experience-container {
+        flex-direction: column;
+    }
+}
+@media(max-width: 789px){
+    .experience-container {
+        flex-direction: column;
+    }
+    .experience-container .menu-card  {
+        flex-direction: column;
+        max-width: 350px;
+    }
+
+}
+/* --------------------------menu cards */
 .container-fluid {
     top: 5%;
     position: absolute;
@@ -16,3 +73,4 @@
     border-radius: 10% 5%;
     height: 200px;
 }
+ 
