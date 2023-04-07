@@ -27,13 +27,14 @@
             <li class="logged-user">
                 {% if user.is_authenticated %}
                 <p class="welcome-msg">
-                    Welcome {{ user.username }}
+                    {{ user.username }}
                 </p>
                 {% endif %} 
             </li>
             {% if user.is_authenticated %}
-            <li><a href="logout.html"><i class="fa-solid fa-arrow-right-from-bracket"></i></a></li>
             <li><a href="order-list.html"><i class="fa fa-basket-shopping"></i><span id="trolley">0</span></a></li>
+            <li><a href="logout.html"><i class="fa-solid fa-arrow-right-from-bracket"></i></a></li>
+ 
             {% else %}
             {% endif %} 
                <!-- <li class="logged-user">
