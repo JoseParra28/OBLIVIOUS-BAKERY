@@ -21,13 +21,20 @@
         </div>
         <ul class="nav-items">
             <li><a href="index.html">home</a></li>
-            <li><a href="pie.html">pies</a></li>
-            <li><a href="cakes.html">cakes</a></li>
-            <li><a href="donuts.html">donuts</a></li>
-            <li><a href="susscess.html">susscees</a></li>
+            <li><a href="menu.html">menu</a></li>
             <li><a href="signup.html">Signup</a></li>
             <li><a href="login.html"> <i class="fa fa-user"></i></a></li>
-            <li><a href="order-list.html"><i class="fa fa-basket-shopping"></i><span id="trolley">0</span></a></li>
+            {% if user.is_authenticated %}
+            <p class="welcome-msg">
+                Welcome {{ user.username }}
+            </p>
+            {% endif %} 
+        </li>
+        {% if user.is_authenticated %}
+        <li><a href="logout.html"><i class="fa-solid fa-arrow-right-from-bracket"></i></a></li>
+        <li><a href="order-list.html"><i class="fa fa-basket-shopping"></i><span id="trolley">0</span></a></li>
+        {% else %}
+        {% endif %} 
         </ul>
     </nav>
 </div>
@@ -76,8 +83,8 @@
                 <button type="submit" class="submit-order-btn" onclick="order()"> Submit </button>
             </div>
             {% else %}
-            <div class="/ml-auto m-4/">
-                <a href="login.html"><i class="fa fa-user"></i> Log in</a>
+            <div class="nav-items">
+                <li><a href="login.html" class="text-center">login</a></li>
             </div>
             {% endif %} 
         </div>
