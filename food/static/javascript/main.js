@@ -1,16 +1,28 @@
-// const hours = 24;
-// const now = new Date().GetTime();
-// const stepTime = localStorage.getItem('stepTime');
+const navToggler = document.querySelector('.nav-toggler');
+const navMenu = document.querySelector('.site-navbar ul');
+const navLinks = document.querySelectorAll('.site-navbar a');
 
-// if (stepTime == null){
-//     localStorage.getItem('StepTime', now);
-// }
-// else {
-//     if (now - stepTime > hours*60*60*1000){
-//         localStorage.clear();
-//         localStorage.setItem('stepTime', now);
-//     }
-// }
+
+allEventListners();
+
+
+function allEventListners() {
+  navToggler.addEventListener('click', togglerClick);
+  navLinks.forEach( elem => elem.addEventListener('click', navLinkClick));
+}
+
+
+function togglerClick() {
+  navToggler.classList.toggle('toggler-open');
+  navMenu.classList.toggle('open');
+}
+
+
+function navLinkClick() {
+  if(navMenu.classList.contains('open')) {
+    navToggler.click();
+  }
+}
 
 let orders = JSON.parse(localStorage.getItem('orders'));
 let total = localStorage.getItem('total');
@@ -27,6 +39,9 @@ if (total == null || total === undefined){
 
 let trolley = document.querySelector('#trolley');
 trolley.innerHTML = orders.length;
+
+
+
 
 
 
