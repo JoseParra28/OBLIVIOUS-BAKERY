@@ -1,49 +1,4 @@
 
-.experience-container {
-    position: relative;
-    width: 124vh;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-}
-
-.experience-container .menu-card {
-    position: relative;
-    width: 59vh;
-    height: 360px;
-    margin: 10px;
-    padding: 15px;
-    display: flex;
-    border-radius: 6px;
-}
-.experience-container .menu-card .imgBx {
-    max-width: 150px;
-    flex: 0 0 150px ;
-
-}
-.experience-container .menu-card .imgBx img {
-    max-width: 27vh;
-}
-.experience-container .menu-card .card-content {
-    margin-left: 20%;
-    margin-top: 0%;
-}
-@media(max-width: 991px){
-    .experience-container {
-        flex-direction: column;
-    }
-}
-@media(max-width: 789px){
-    .experience-container {
-        flex-direction: column;
-    }
-    .experience-container .menu-card  {
-        flex-direction: column;
-        max-width: 350px;
-    }
-
-}
 /* ---------------------------------------About preview */
 .about-preview {
     height: 47vh;
