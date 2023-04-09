@@ -13,6 +13,10 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 from pathlib import Path
 import os
 import food
+import os
+# import dj_database_url
+# if os.path.isfile('env.py'):
+#     import env
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve(strict=True).parent.parent
@@ -22,7 +26,7 @@ BASE_DIR = Path(__file__).resolve(strict=True).parent.parent
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'tgz25r%r*3=4%mr8&xrmmmyaxirah7oyexgoa+2bo0qp*k8lu&'
+SECRET_KEY = ('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -82,6 +86,9 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+# DATABASES = {
+#      'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
+#  }
 
 
 # Password validation
