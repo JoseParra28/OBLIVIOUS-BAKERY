@@ -14,22 +14,24 @@
     
 </head>
 <body>
-<!-- ----------------------------------nav-bar -->
-<div class="wrapper">
-    <nav class="nav-bar">
-        <div class="logo">
-            <img src="{% static 'images/oblivious-logo.jpg' %}" alt="image" class="logo-img" style="width: 110px; height: 100%;">
-        </div>
-        <ul class="nav-items">
+ <!-- --------------------------navbar  -->
+ <div class="navbar-area">
+    <div class="nav-container">
+      <nav class="site-navbar">
+        <a href="index.html" class="site-logo"><img src="{% static 'images/oblivious-logo.jpg' %}" alt="image" class="logo-img" style="width: 110px; height: 100%;"></a>
+        <ul>
             <li><a href="index.html">home</a></li>
-            <li><a href="signup.html">Signup</a></li>
-            <li><a href="login.html">login<i class="fa fa-user"></i></a></li>
-            <li><a href="order-list.html">basket<i class="fa fa-basket-shopping"></i><span id="trolley">0</span></a></li>
+            <li><a href="donuts.html">donuts</a></li>
+            <li><a href="cakes.html">cakes</a></li>
+            <li><a href="pies.html">pies</a></li>
+            <li><a href="signup.html">Signup</a></li>         
+            <li><a href="login.html"><i class="fa fa-user"></i></a></li>
+            <li><a href="order-list.html"><i class="fa fa-basket-shopping"></i><span id="trolley">0</span></a></li>
             <li class="logged-user">
                 {% if user.is_authenticated %}
-                <p class="welcome-msg">
-                    Welcome {{ user.username }}
-                </p>
+                
+                    {{ user.username }}
+                
                 {% endif %} 
             </li>
             {% if user.is_authenticated %}
@@ -37,8 +39,13 @@
             {% else %}
             {% endif %} 
         </ul>
-    </nav>
-</div>
+        <!-- nav-toggler for mobile version only -->
+        <button class="nav-toggler">
+          <span></span>
+        </button>
+      </nav>
+    </div>
+  </div>
 <!-- ------------------menu section -->
 
 <section>

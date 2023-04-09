@@ -130,7 +130,7 @@
 
 /* ---------------------------------------About preview */
 .about-preview {
-    height: 84vh;
+    height: 40vh;
     width: 100%;
     overflow: hidden;
     position: relative;
@@ -175,7 +175,6 @@
 }
 .experience-container {
     position: relative;
-    width: 124vh;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -474,7 +473,7 @@ flex-direction: column;
   
   
   /* mobile breakpoint start */
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: 967px) {
    
     /* navbar css for mobile start */
     .nav-toggler{
@@ -487,6 +486,7 @@ flex-direction: column;
       position: absolute;
       width: 100%;
       height: calc(100vh - 60px);
+      z-index: 222;
       left: 0;
       top: 60px;
       flex-direction: column;

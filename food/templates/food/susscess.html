@@ -14,19 +14,32 @@
 </head>
 
 <body>
-    {{ name }}
-<!-- nav-bar -->
-<div class="wrapper">
-    <nav class="nav-bar">
-        <div class="logo">
-            <img src="{% static 'images/oblivious-logo.jpg' %}" alt="image" class="logo-img" style="width: 110px; height: 100%;">
-        </div>
-        <ul class="nav-items">
-            <li><a href="index.html">home</a></li>
-
+ <!-- --------------------------navbar  -->
+ <div class="navbar-area">
+    <div class="nav-container">
+      <nav class="site-navbar">
+        <a href="index.html" class="site-logo"><img src="{% static 'images/oblivious-logo.jpg' %}" alt="image" class="logo-img" style="width: 110px; height: 100%;"></a>
+        <ul>
+            <li><a href="index.html">home</a></li>        
+            <li class="logged-user">
+                {% if user.is_authenticated %}
+                
+                    {{ user.username }}
+                
+                {% endif %} 
+            </li>
+            {% if user.is_authenticated %}
+            <li><a href="logout.html"><i class="fa-solid fa-arrow-right-from-bracket"></i>logout</a></li>
+            {% else %}
+            {% endif %} 
         </ul>
-    </nav>
-</div>
+        <!-- nav-toggler for mobile version only -->
+        <button class="nav-toggler">
+          <span></span>
+        </button>
+      </nav>
+    </div>
+  </div>
 <!-- ------------------------------suscess message -->
 <div class="about-preview">
     <div class="about-content">
