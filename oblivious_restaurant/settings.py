@@ -16,6 +16,7 @@ import food
 import os
 import django_heroku
 import cloudinary
+import cloudinary_storage
 import dj_database_url
 if os.path.isfile('env.py'):
     import env
@@ -33,7 +34,7 @@ SECRET_KEY = ('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['oblivious-bakery.herokuapp.com', 'localhost']
+ALLOWED_HOSTS = ['oblivious-bakery.herokuapp.com', 'localhost'],
 
 
 # Application definition
