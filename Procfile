@@ -1,1 +1,1 @@
-web: gunicorn oblivious_bakery.wsgi
+web: gunicorn oblivious-bakery.wsgi
