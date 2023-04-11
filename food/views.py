@@ -85,10 +85,11 @@ def donut(request):
 @csrf_exempt
 def order(request):
     request.session.set_expiry(0)
-    if request.is_ajax():
+    if request:
         request.session['note'] = request.POST.get('note')
         request.session['order'] = request.POST.get('orders')
-        orders = json.loads(request.session['order'])
+        if request.session['order'] is not None:
+            orders = json.loads(request.session['order'])
         request.session['total'] = request.POST.get('total')
         if request.user.is_authenticated:
             order = Order(customer=request.user, number=randomOrderNumber(6), receipt=float(request.session['total']), notes=request.session['note'])
