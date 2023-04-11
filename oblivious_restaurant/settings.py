@@ -35,7 +35,7 @@ SECRET_KEY = ('SECRET_KEY')
 DEBUG = True
 
 
-ALLOWED_HOSTS = ['oblivious-bakery.herokuapp.com/', 'localhost'],
+ALLOWED_HOSTS = ['oblivious.herokuapp.com/', 'localhost'],
 
 
 # Application definition
@@ -134,9 +134,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 
-STATIC_URL = '/static/'
-MEDIA_URL = '/images/'
-STATICFILE_DIRS = [os.path.join(BASE_DIR, 'static')]
+# STATIC_URL = '/static/'
+# MEDIA_URL = '/images/'
+# STATICFILE_DIRS = [os.path.join(BASE_DIR, 'static')]
 
 
 STATICFILE_STORAGE = 'cloudinary_storage.storage.StaticHashedCloudinaryStorage'
