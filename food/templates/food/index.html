@@ -89,7 +89,7 @@
     {% for itemm in items %}
     <tr>
         <!-- <p style="text-transform: capitalize;">{{ user.username }} :  </p> -->
-        <td>{{ user.username }} : {{ itemm.name }}</td>
+        <td style="text-transform: capitalize;">{{ user.username }} : {{ itemm.name }}</td>
         <td>
             {% if user.is_authenticated %}
             <a href="/edit/{{ itemm.id }}">
