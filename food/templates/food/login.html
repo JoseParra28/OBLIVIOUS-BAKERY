@@ -59,8 +59,8 @@
     </div>
   </div>
 
- <div class="hero-section">
-    <div class="hero-img">
+ <div class="form-hero-section">
+    <div class="form-hero-img">
         <img src="{% static 'images/bread-hero.jpg' %}" alt="bread image">
     </div>
  </div>
@@ -84,7 +84,7 @@
                     {% if messages %}
                     <ul class="pt-2 text-center">
                         {% for msg in messages %}
-                        <li style="color:red;">{{ msg }}</li>
+                        <li>{{ msg }}</li>
                         {% endfor %}
                     </ul>
                     {% endif %}
