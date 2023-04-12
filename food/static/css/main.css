@@ -326,6 +326,12 @@
     padding-top: 10%;
 }
 /* ------------------------------ sign up form section  */
+.form-hero-img img {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background-repeat: no-repeat;
+}
 .form-blur {
     background-color: rgba(225, 220, 220, 0.1);
     backdrop-filter: blur(5px);
@@ -343,11 +349,19 @@
 
 .signup-container {
     width: 100vh;
-    width: 100vh;
     position: absolute;
     left: 24%;
     top: 11%;
 }
+@media(max-width: 991px){
+    .signup-container {
+        width: 107vh;
+}}
+@media(max-width: 346px){
+    .signup-container {
+        width: 56vh;
+
+}}
 
 #id_username, #id_email, #id_first_name, #id_password1, #id_password2{
     border-radius: 10px;
@@ -425,6 +439,7 @@ padding: 9%;
     -moz-background-clip: text;
     -webkit-text-fill-color: transparent;
     -moz-text-fill-color:transparent;
+    font-size: 1.2rem;
 }
 
 .footer__link-wrap{
@@ -444,12 +459,21 @@ padding: 9%;
     color: var(--font-color) ;
     text-decoration: none;
     margin-bottom: 0.5rem;
+    font-family: inherit;
+    font-size: 1rem;
 }
 .logo-footer {
     display: flex;
     justify-content: center;
     text-align: center;
     margin: 3%;
+}
+@media screen and (max-width: 967px){
+    .footer__link-wrap{
+        display: block;
+    
+    }
+
 }
 
 .crud td, tr {
