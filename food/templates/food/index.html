@@ -55,18 +55,18 @@
     </div>
 </section>
  
-  <!-- ------------------------------about section -->
-  <!-- <div class="about-preview">
-    <div class="about-content">
-    <h2>about us</h2>
-    <p class="about-p">lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dumm
-        lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dumm
-    </p>
-</div>
-</div> -->
 <!-- --------------------------------------------about section img -->
 <div class="about-img">
     <img src="{% static 'images/bread-hero.jpg' %}" alt="smoked-dish-on-table">
+</div>
+
+  <!-- ------------------------------about section -->
+  <div class="about-preview">
+    <div class="about-content">
+    <h2>about us</h2>
+    <p class="about-p">Oblivious bakery is a family owned business located in the heart of Dublin, our specialty is homemade Cakes, Pies, and Donuts. The our real specialty is that by every order you place, you will get a complimentary mini pastry, you will be oblivious to what it is until you ceceive it. 
+    </p>
+</div>
 </div>
 
 <!-- -------------------------reviews sections -->
@@ -76,8 +76,7 @@
         </div>
         <div class="review-content">
         <h2>reviews </h2>
-        <p class="review-p">lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dumm
-            lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dumm
+        <p class="review-p"> See what out customer are saying, or if you have an account with us, please leave a review.
         </p>
         {% if user.is_authenticated %}
         <a href="add-item.html"><button>Add a review</button></a>
@@ -119,9 +118,6 @@
     {% endfor %}
 </table>
         </div>
-
-
-        
     </div>
 </div>
 </section>
@@ -130,7 +126,7 @@
 <section class="team-section">
     <div class="experience-info">
         <h2>meet the team</h2>
-        <p>Loresum has been thepecimypesetting, rrelease of Letraset sheets containing Lorem Ipsum passages, and moru</p>
+        <p>We have an incredibli talented team that work hard everyday to ensure you get the best of the best.</p>
     </div>
     <div class="experience-container">
         <div class="menu-card">
@@ -139,7 +135,8 @@
             </div>
             <div class="card-content">
                 <h3>Owner - Samantha Porter</h3>
-                <p>Lorem Ipsum is simply dummy text00s, when1500s,</p>
+                <p>Samantha is the founder and out team leader.
+                    Samantha began her career as baker when she was only 12 years old. she worked in several bakeries and restaurants up until 2 years ago when she decided to open her own business along with her father James. </p>
             </div>
         </div>
         <div class="menu-card">
@@ -148,7 +145,7 @@
             </div>
             <div class="card-content">
                 <h3>head baker - Eric Chen</h3>
-                <p>Lorem Ipsum is simplyorem Ipsum is simply dummy text of the printing and typesettiorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when1500s dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
+                <p></p>
             </div>
         </div>
         <div class="menu-card">
