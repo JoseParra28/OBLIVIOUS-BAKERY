@@ -33,7 +33,7 @@ if (orders == null || orders === Number){
 }
 
 if (total == null || total === Number){
-    localStorage.setItem(0);
+    localStorage.setItem(total);
     total = localStorage.getItem('orders');
 }
 

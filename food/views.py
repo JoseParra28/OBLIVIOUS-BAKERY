@@ -92,13 +92,13 @@ def order(request):
             orders = json.loads(request.session['order'])
         request.session['total'] = request.POST.get('total')
         if request.user.is_authenticated:
-            order = Order(customer=request.user, number=randomOrderNumber(6), receipt=float(request.session['total']), notes=request.session['note'])
+            order = Order(customer=request.user, number=randomOrderNumber(6), receipt=request.session['total'], notes=request.session['note'])
             order.save()
             for article in orders:
                 item = Item(
                     order=order,
                     name=article[0],
-                    price=float("2"),
+                    price=article[2],
                     size=article[1]
                 )
                 item.save()       
