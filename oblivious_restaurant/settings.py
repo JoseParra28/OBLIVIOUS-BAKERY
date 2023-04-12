@@ -36,7 +36,7 @@ DEBUG = True
 
 
 ALLOWED_HOSTS = ['oblivious-bakery.herokuapp.com', 'localhost'],
-# ['database-app-todo.herokuapp.com', 'locahost']
+
 
 
 # Application definition

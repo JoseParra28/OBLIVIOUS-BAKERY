@@ -27,12 +27,12 @@ function navLinkClick() {
 let orders = JSON.parse(localStorage.getItem('orders'));
 let total = localStorage.getItem('total');
 
-if (orders == null || orders === undefined){
+if (orders == null || orders === Number){
     localStorage.setItem('orders', JSON.stringify([]));
     orders = JSON.parse(localStorage.getItem('orders'));
 }
 
-if (total == null || total === undefined){
+if (total == null || total === Number){
     localStorage.setItem(0);
     total = localStorage.getItem('orders');
 }
