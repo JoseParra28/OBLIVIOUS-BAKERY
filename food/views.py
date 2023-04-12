@@ -93,7 +93,6 @@ def order(request):
         request.session['total'] = request.POST.get('total')
         if request.user.is_authenticated:
             order = Order(customer=request.user, number=randomOrderNumber(6), receipt=request.session['total'], notes=request.session['note'])
-            order.save()
             for article in orders:
                 item = Item(
                     order=order,
