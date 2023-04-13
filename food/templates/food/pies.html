@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="{% static 'css/main.css' %}">
     <link rel="stylesheet" href="{% static 'css/menu.css' %}">
     <link rel="icon" sizes="100x100" type="image/x-icon" href="{% static 'images/oblivious-logo.jpg' %}">
-    <title>{% block tittle %} {{ name }} {% endblock %}</title>
+    <title>PIES</title>
     
 </head>
 
@@ -26,7 +26,7 @@
             <li><a href="cakes.html">cakes</a></li>
             <li><a href="signup.html">Signup</a></li>         
             <li><a href="login.html"><i class="fa fa-user"></i></a></li>
-            <li><a href="order-list.html"><i class="fa fa-basket-shopping"></i><span id="trolley">0</span></a></li>
+            <li><a href="order-list.html"><span id="trolley">0</span>basket</a></li>
             <li class="logged-user">
                 {% if user.is_authenticated %}
                 
@@ -35,7 +35,7 @@
                 {% endif %} 
             </li>
             {% if user.is_authenticated %}
-            <li><a href="logout.html"><i class="fa-solid fa-arrow-right-from-bracket"></i></a></li>
+            <li><a href="logout.html"><i class="fa-solid fa-arrow-right-from-bracket"></i>logout</a></li>
             {% else %}
             {% endif %} 
         </ul>

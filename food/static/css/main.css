@@ -48,7 +48,48 @@
     
     }
   /* ----------------------------------------------Header, logo and nav bar */
-
+  .navbar-area {
+    background: var(--background-color);
+  }
+  .site-navbar {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  a.site-logo {
+    font-size: 26px;
+    font-weight: 800;
+    text-transform: uppercase;
+    text-decoration: none;
+    margin-left: 10%;
+  }
+  .site-navbar ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+  }
+  .site-navbar ul li a {
+    color: var(--font-color);
+    font-family: Lato, sans-serif;
+    padding: 20px;
+    display: block;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+  .logged-user {
+    color: var(--font-color);
+    font-family: Lato, sans-serif;
+    padding-top: 1.5%;
+    font-size: 1.5rem;
+  }
+  .site-navbar ul li a:hover {
+    background-image: linear-gradient(45deg, #782b25 0%, #a23930 0%, #872b20 21%, #d9402f 52%, #61111f 78%, #6a1818 100%);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color:transparent;
+  }
     .nav-toggler {
         height: 39px;
         display: none;
@@ -124,8 +165,7 @@
         }  
         
       }
- 
-
+  
 /* ---------------------------Hero section */
 .orders-container {
     position: absolute;
@@ -176,7 +216,21 @@
     text-align: center;
     padding: 1%;
 }
-
+@media screen and (max-width: 950px) {
+    .about-img img {
+        height: 35vh ;
+    }
+        
+}
+@media screen and (max-width: 450px) {
+    .about-img img {
+        height: 18vh;
+    }
+    .about-preview {
+        height: 30vh;
+    }
+        
+}
 
 /* ----------------------------------------------team section */
 
@@ -223,7 +277,7 @@
         flex-direction: column;
     }
 }
-@media(max-width: 789px){
+c{
     .experience-container {
         flex-direction: column;
     }
@@ -262,6 +316,11 @@
 }
 .review-content  h2, p {
     text-align: center;
+}
+@media screen and (max-width: 450px) {
+    .review {
+        height: 35vh;
+    }
 }
 
 /* ---------------------------------orders status */
@@ -394,7 +453,7 @@ padding: 9%;
 }
 .footer__links h2{
     margin-bottom: 16px;
-    background-color: #8f3731;
+    font-size: 1.4rem;
     background-image: linear-gradient(to top, #782b25 0%, #a23930 0%, #872b20 21%, #d9402f 52%, #61111f 78%, #6a1818 100%);
     -webkit-background-clip: text;
     -moz-background-clip: text;
@@ -435,50 +494,11 @@ flex-direction: column;
 @media screen and (max-width: 967px) {
     .footer__link-wrap{
         display: table-column;
+        font-size: 1rem;
+    }
+ 
+}
 
-}}
 
-/* navbar regular css start */
-.navbar-area {
-    background: var(--background-color);
-  }
-  .site-navbar {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-  }
-  a.site-logo {
-    font-size: 26px;
-    font-weight: 800;
-    text-transform: uppercase;
-    text-decoration: none;
-    margin-left: 10%;
-  }
-  .site-navbar ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    display: flex;
-  }
-  .site-navbar ul li a {
-    color: var(--font-color);
-    font-family: Lato, sans-serif;
-    padding: 20px;
-    display: block;
-    text-decoration: none;
-    text-transform: uppercase;
-  }
-  .logged-user {
-    color: var(--font-color);
-    font-family: Lato, sans-serif;
-    padding-top: 1.5%;
-    font-size: 1.5rem;
-  }
-  .site-navbar ul li a:hover {
-    background-image: linear-gradient(45deg, #782b25 0%, #a23930 0%, #872b20 21%, #d9402f 52%, #61111f 78%, #6a1818 100%);
-    -webkit-background-clip: text;
-    -moz-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    -moz-text-fill-color:transparent;
-  }
+
 

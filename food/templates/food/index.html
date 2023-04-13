@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="{% static 'css/main.css' %}">
     <link rel="stylesheet2" href="{% static 'css/colors.css' %}">
     <link rel="icon" sizes="100x100" type="image/x-icon" href="{% static 'images/oblivious-logo.jpg' %}">
-    <title>{% block tittle %} {{ name }} {% endblock %}</title>
+    <title>HOME</title>
     
 </head>
 <body>
@@ -24,7 +24,7 @@
             <li><a href="menu.html">menu</a></li>
             <li><a href="signup.html">Signup</a></li>         
             <li><a href="login.html"><i class="fa fa-user"></i>login</a></li>
-            <li><a href="order-list.html"><i class="fa fa-basket-shopping"></i><span id="trolley">0</span></a></li>
+            <li><a href="order-list.html"></i><span id="trolley">0</span>basket</a></li>
             <li class="logged-user">
                 {% if user.is_authenticated %}
                 
@@ -33,7 +33,7 @@
                 {% endif %} 
             </li>
             {% if user.is_authenticated %}
-            <li><a href="logout.html"><i class="fa-solid fa-arrow-right-from-bracket"></i></a></li>
+            <li><a href="logout.html"><i class="fa-solid fa-arrow-right-from-bracket"></i>logout</a></li>
             {% else %}
             {% endif %} 
         </ul>
@@ -128,7 +128,8 @@
 <section class="team-section">
     <div class="experience-info">
         <h2>meet the team</h2>
-        <p>Loresum has been thepecimypesetting, rrelease of Letraset sheets containing Lorem Ipsum passages, and moru</p>
+        <p>We value our team as much as we value our customers, they are after all who make this business run. at OBLIVIOUS we have an incrediblibly talented team.
+            wwe believe in personal growth so we make sure each of our team member enjoy their work enviroment but also developing their career. </p>
     </div>
     <div class="experience-container">
         <div class="menu-card">
@@ -147,7 +148,7 @@
             </div>
             <div class="card-content">
                 <h3>head baker - Eric Chen</h3>
-                <p>Eric began his career early this year, he is one of the top chefs in dublin</p>
+                <p>Eric began his career early this year, he is one of the top chefs in dublin by simply doing what hi loves.</p>
             </div>
         </div>
         <div class="menu-card">
@@ -156,7 +157,7 @@
             </div>
             <div class="card-content">
                 <h3>marketing executive - Melisa copper</h3>
-                <p>Melisa manages the marketing side of the business, as well as our social media accounts.</p>
+                <p>Melisa manages the marketing side of the business, as well as our social media accounts. she comes from doctors background but a few years ago she decided that markety is her strongest suit. and she's great at it!!!</p>
             </div>
         </div>
         <div class="menu-card">
@@ -165,7 +166,7 @@
             </div>
             <div class="card-content">
                 <h3>general manager - Brenda mcCartie </h3>
-                <p>"don't expect to see a change of you're not able to make one"</p>
+                <p>Brenda originally started as a waitress here at OBLIVIOUS and slowly worked her way up to her position now. With a strong passion for football in her free time, she is ended an natural team leader</p>
             </div>
         </div>
         <div class="menu-card">
@@ -173,8 +174,9 @@
                 <img src="{% static 'images/sous-chef.jpg' %}" alt="card-image">
             </div>
             <div class="card-content">
-                <h3> chef - damian ramirez</h3>
-                <p>"cooking is love made edible"</p>
+                <h3> boulanger - damian ramirez</h3>
+                <p>Damian moved to dublin when he was 12. Damian comes from a strong background in culinary arts, boulangerie being hes strongs skill.
+                    "cooking is love made edible" </p>
             </div>
         </div>
         <div class="menu-card">
@@ -183,7 +185,9 @@
             </div>
             <div class="card-content">
                 <h3>executive pastry chef - vanessa lawless</h3>
-                <p>"a party without a cake is just a meeting" - Julia child</p>
+                <p>"a party without a cake is just a meeting" - Julia child
+                    Vanessa has recently moved back to dublin from Paris, her passion for food has definetly but on the spot we are now. 
+                </p>
             </div>
         </div>
     </div>
