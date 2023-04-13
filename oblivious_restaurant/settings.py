@@ -34,7 +34,13 @@ SECRET_KEY = ('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+<<<<<<< HEAD
 ALLOWED_HOSTS = ['oblivious-bakery.herokuapp.com', 'localhost']
+=======
+
+ALLOWED_HOSTS = ['oblivious-bakery.herokuapp.com', 'localhost'],
+# ['database-app-todo.herokuapp.com', 'locahost']
+>>>>>>> 0b4cb5186fa5ab8c4c8a6b3fc6c1c7f50f426caf
 
 
 # Application definition

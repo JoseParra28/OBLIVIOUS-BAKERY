@@ -19,7 +19,6 @@
           font-family: Lato, sans-serif;
           font-weight: bold;
           font-size: 1rem;
-          text-transform: capitalize;
       }
       /* buttons main style */
       button {
@@ -48,6 +47,7 @@
     background-color: red;
     }
   /* ----------------------------------------------Header, logo and nav bar */
+<<<<<<< HEAD
 
     .nav-toggler {
         height: 39px;
@@ -125,6 +125,128 @@
         
       }
  
+=======
+  
+.navbar-area {
+    background: var(--background-color);
+  }
+  .site-navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  a.site-logo {
+    font-size: 26px;
+    font-weight: 800;
+    text-transform: uppercase;
+    text-decoration: none;
+    margin-left: 10%;
+  }
+  .site-navbar ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+  }
+  .site-navbar ul li a {
+    color: var(--font-color);
+    font-family: Lato, sans-serif;
+    padding: 20px;
+    display: block;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+  .logged-user {
+    color: var(--font-color);
+    font-family: Lato, sans-serif;
+    padding-top: 1.5%;
+    font-size: 1.5rem;
+  }
+  .site-navbar ul li a:hover {
+    background-image: linear-gradient(45deg, #782b25 0%, #a23930 0%, #872b20 21%, #d9402f 52%, #61111f 78%, #6a1818 100%);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color:transparent;
+  }
+
+  /* nav-toggler css start */
+  .nav-toggler {
+    height: 39px;
+    display: none;
+  }
+  .nav-toggler span, 
+  .nav-toggler span:before, 
+  .nav-toggler span:after {
+    width: 28px;
+    height: 3px;
+    background-color: #424040;
+    display: block;
+    transition: .3s;
+  }
+  .nav-toggler span:before {
+    content: '';
+    transform: translateY(-9px);
+  }
+  .nav-toggler span:after {
+    content: '';
+    transform: translateY(6px);
+  }
+  .nav-toggler.toggler-open span {
+    background-color: var(--toggle-background);
+  }
+  .nav-toggler.toggler-open span:before {
+    transform: translateY(0px) rotate(45deg);
+  }
+  .nav-toggler.toggler-open span:after {
+    transform: translateY(-3px) rotate(-45deg);
+  }
+
+  
+  
+  /* mobile breakpoint start */
+  @media screen and (max-width: 967px) {
+   
+    /* navbar css for mobile start */
+    .nav-toggler{
+      display: block;
+    }
+    .site-navbar {
+      min-height: 60px;
+    }
+    .site-navbar ul {
+      position: absolute;
+      width: 100%;
+      height: calc(100vh - 60px);
+      z-index: 222;
+      left: 0;
+      top: 60px;
+      flex-direction: column;
+      align-items: center;
+      background-image: linear-gradient( #782b25 0%, #a23930 0%, #872b20 21%, #782b25 50%);
+      max-height: 0;
+      overflow: hidden;
+      transition: .3s;
+    }
+    .site-navbar ul li {
+      width: 100%;
+      text-align: center;
+    }
+    .site-navbar ul li a {
+      padding: 25px;
+      color: #c8cace;
+    }
+    .site-navbar ul.open {
+      max-height: 100vh;
+      overflow: visible;
+    }
+    .intro-area h2 {
+      font-size: 36px;
+      margin-bottom: 15px;
+    }  
+    
+  }
+>>>>>>> 0b4cb5186fa5ab8c4c8a6b3fc6c1c7f50f426caf
 
 /* ---------------------------Hero section */
 .orders-container {
@@ -159,7 +281,12 @@
     justify-content: center;
 }
 .about-img img {
+<<<<<<< HEAD
     height: 45vh;
+=======
+    height: 24vh;
+    width: 31vh;
+>>>>>>> 0b4cb5186fa5ab8c4c8a6b3fc6c1c7f50f426caf
     background-repeat: no-repeat;
     position: inherit;
     margin: 3%;
@@ -194,7 +321,7 @@
 .experience-container {
     position: relative;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
     flex-wrap: wrap;
 }
@@ -221,11 +348,13 @@
 @media(max-width: 991px){
     .experience-container {
         flex-direction: column;
+
     }
 }
 @media(max-width: 789px){
     .experience-container {
         flex-direction: column;
+        
     }
     .experience-container .menu-card  {
         flex-direction: column;
@@ -277,6 +406,12 @@
     padding-top: 10%;
 }
 /* ------------------------------ sign up form section  */
+.form-hero-img img {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background-repeat: no-repeat;
+}
 .form-blur {
     background-color: rgba(225, 220, 220, 0.1);
     backdrop-filter: blur(5px);
@@ -294,11 +429,19 @@
 
 .signup-container {
     width: 100vh;
-    width: 100vh;
     position: absolute;
     left: 24%;
     top: 11%;
 }
+@media(max-width: 991px){
+    .signup-container {
+        width: 107vh;
+}}
+@media(max-width: 346px){
+    .signup-container {
+        width: 56vh;
+
+}}
 
 #id_username, #id_email, #id_first_name, #id_password1, #id_password2{
     border-radius: 10px;
@@ -375,6 +518,7 @@ padding: 9%;
     -moz-background-clip: text;
     -webkit-text-fill-color: transparent;
     -moz-text-fill-color:transparent;
+    font-size: 1.2rem;
 }
 
 .footer__link-wrap{
@@ -383,7 +527,7 @@ padding: 9%;
 }
 .footer__items {
     display: flex;
-flex-direction: column;
+    flex-direction: column;
     align-items: flex-start;
     margin: 16px;
     text-align: left;
@@ -394,12 +538,21 @@ flex-direction: column;
     color: var(--font-color) ;
     text-decoration: none;
     margin-bottom: 0.5rem;
+    font-family: inherit;
+    font-size: 1rem;
 }
 .logo-footer {
     display: flex;
     justify-content: center;
     text-align: center;
     margin: 3%;
+}
+@media screen and (max-width: 967px){
+    .footer__link-wrap{
+        display: block;
+    
+    }
+
 }
 
 .crud td, tr {
@@ -413,6 +566,7 @@ flex-direction: column;
 
 }}
 
+<<<<<<< HEAD
 /* navbar regular css start */
 .navbar-area {
     background: var(--background-color);
@@ -457,3 +611,5 @@ flex-direction: column;
     -moz-text-fill-color:transparent;
   }
 
+=======
+>>>>>>> 0b4cb5186fa5ab8c4c8a6b3fc6c1c7f50f426caf

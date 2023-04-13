@@ -10,7 +10,11 @@
     <link rel="stylesheet" href="{% static 'css/main.css' %}">
     <link rel="stylesheet2" href="{% static 'css/colors.css' %}">
     <link rel="icon" sizes="100x100" type="image/x-icon" href="{% static 'images/oblivious-logo.jpg' %}">
+<<<<<<< HEAD
     <title>{% block tittle %} {{ name }} / HOME  {% endblock %}</title>
+=======
+    <title>{% block tittle %} {{ name }} {% endblock %}</title>
+>>>>>>> 0b4cb5186fa5ab8c4c8a6b3fc6c1c7f50f426caf
     
 </head>
 <body>
@@ -56,6 +60,7 @@
     </div>
 </section>
  
+<<<<<<< HEAD
   <!-- ------------------------------about section -->
   <div class="about-preview">
     <div class="about-content">
@@ -66,9 +71,20 @@
     </p>
 </div>
 </div>
+=======
+>>>>>>> 0b4cb5186fa5ab8c4c8a6b3fc6c1c7f50f426caf
 <!-- --------------------------------------------about section img -->
 <div class="about-img">
     <img src="{% static 'images/bread-hero.jpg' %}" alt="smoked-dish-on-table">
+</div>
+
+  <!-- ------------------------------about section -->
+  <div class="about-preview">
+    <div class="about-content">
+    <h2>about us</h2>
+    <p class="about-p">Oblivious bakery is a family owned business located in the heart of Dublin, our specialty is homemade Cakes, Pies, and Donuts. The our real specialty is that by every order you place, you will get a complimentary mini pastry, you will be oblivious to what it is until you ceceive it. 
+    </p>
+</div>
 </div>
 
 <!-- -------------------------reviews sections -->
@@ -78,7 +94,11 @@
         </div>
         <div class="review-content">
         <h2>reviews </h2>
+<<<<<<< HEAD
         <p class="review-p">See what out customer are saying, or if you have an account with us, please leave a review.
+=======
+        <p class="review-p"> See what out customer are saying, or if you have an account with us, please leave a review.
+>>>>>>> 0b4cb5186fa5ab8c4c8a6b3fc6c1c7f50f426caf
         </p>
         {% if user.is_authenticated %}
         <a href="add-item.html"><button>Add a review</button></a>
@@ -88,10 +108,10 @@
 
         <div class="crud">
             <table>
-    {% for itemm in item %}
+    {% for itemm in items %}
     <tr>
         <!-- <p style="text-transform: capitalize;">{{ user.username }} :  </p> -->
-        <td>{{ user.username }} : {{ itemm.name }}</td>
+        <td style="text-transform: capitalize;">{{ user.username }} : {{ itemm.name }}</td>
         <td>
             {% if user.is_authenticated %}
             <a href="/edit/{{ itemm.id }}">
@@ -128,7 +148,7 @@
 <section class="team-section">
     <div class="experience-info">
         <h2>meet the team</h2>
-        <p>Loresum has been thepecimypesetting, rrelease of Letraset sheets containing Lorem Ipsum passages, and moru</p>
+        <p>We have an incredibly talented team that work hard everyday to ensure you get the best of the best.</p>
     </div>
     <div class="experience-container">
         <div class="menu-card">
@@ -137,8 +157,13 @@
             </div>
             <div class="card-content">
                 <h3>Owner - Samantha Porter</h3>
+<<<<<<< HEAD
                 <p>founder and team leader. Samantha began her career as baker when she was only 12 years old. 
                     she worked in several bakeries and restaurants up until 2 years ago when she decided to open her own business along with her father James.</p>
+=======
+                <p>founder and team leader.
+                    Samantha began her career as baker when she was only 12 years old. she worked in several bakeries and restaurants up until 2 years ago when she decided to open her own business along with her father James. </p>
+>>>>>>> 0b4cb5186fa5ab8c4c8a6b3fc6c1c7f50f426caf
             </div>
         </div>
         <div class="menu-card">
@@ -192,26 +217,31 @@
 <!-- -------------------------footer -->
 <footer>
     <div class="logo-footer">
-        <img src="{% static 'images/oblivious-logo.jpg' %}" alt="image" class="logo-img" style="width: 138px;">
+        <a href="index.html"><img src="{% static 'images/oblivious-logo.jpg' %}" alt="image" class="logo-img" style="width: 110px; height: 100%;"></a>
    </div>
     <div class="footer__container">
         <div class="footer__links">
             <div class="footer__link-wrap">
                 <div class="footer__items">
                     <h2>About us</h2>
-                    <a href="/">How it works</a>
-                    <a href="/">Testimonials</a>
-                    <a href="/">Careers</a>
-                    <a href="/">Invesments</a>
+                    <a href="/">meet the team</a>
+                    <a href="/">careers</a>
+                    <a href="/">blog</a>
+                    <a href="/">our values </a>
                     <a href="/">Terms or service</a>
                 </div>
                 <div class="footer__items">
-                    <h2>About us</h2>
-                    <a href="/">How it works</a>
-                    <a href="/">Testimonials</a>
-                    <a href="/">Careers</a>
-                    <a href="/">Invesments</a>
-                    <a href="/">Terms or service</a>
+                    <h2>contact us</h2>
+                    <a>18 merrion road, dublin 2</a>
+                    <a>email: oblivious@obliviousbakery.ie</a>
+                    <a>phone number: 01099322</a>
+                </div>
+                <div class="footer__items">
+                    <h2>the menu</h2>
+                    <a href="/">cakes</a>
+                    <a href="/">pies</a>
+                    <a href="/">donuts</a>
+                    <a href="/">complimentary pastries</a>
                 </div>
                 <div class="footer__items">
                     <h2>About us</h2>
