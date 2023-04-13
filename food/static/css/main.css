@@ -254,7 +254,7 @@
 }
 .experience-container .menu-card {
     position: relative;
-    width: 59vh;
+    width: 30vh;
     height: 450px;
     margin: 10px;
     padding: 15px;
@@ -265,27 +265,30 @@
 .experience-container .menu-card .imgBx {
     max-width: 150px;
     flex: 0 0 150px ;
-
 }
 .experience-container .menu-card .imgBx img {
     max-width: 10vh;
    
 }
-
-@media(max-width: 991px){
-    .experience-container {
-        flex-direction: column;
-    }
-}
-c{
-    .experience-container {
-        flex-direction: column;
-    }
     .experience-container .menu-card  {
         flex-direction: column;
         max-width: 350px;
     }
-}
+    @media(max-width: 991px){
+        .experience-container {
+            flex-direction: column;
+        }
+    }
+    @media(max-width: 991px){
+        .experience-container .menu-card  {
+            width: 27;
+        }
+        .experience-container .menu-card .imgBx {
+            max-width: 8vh;
+        }
+    }
+   
+
 /* -----------------------reviews section */
 .review {
     height: 60vh;

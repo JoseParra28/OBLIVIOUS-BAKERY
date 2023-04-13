@@ -47,7 +47,7 @@
   
  <div class="form-hero-section">
     <div class="form-hero-img">
-        <img src="{% static 'images/bread-hero.jpg' %}" alt="bread image">
+        <img src="{% static 'images/form-img.jpg' %}" alt="bread image">
     </div>
  </div>
 <section class="singup-form-section nav-items">
@@ -75,7 +75,7 @@
                     {% endfor %}
                     <div>
                         {% for error in form.errors %}
-                        <small style="color: red; font-size: 4rem" >{{ error }}</small>
+                        <small style="color: rgb(144, 53, 53); font-size: 4rem" >{{ error }}</small>
                         {% endfor %}
                     </div>
                     <button type="submit" class="btn-info">Signup</button>
