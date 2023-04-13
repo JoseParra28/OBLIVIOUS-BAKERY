@@ -85,7 +85,7 @@ def donut(request):
 @csrf_exempt
 def order(request):
     request.session.set_expiry(0)
-    if request.is_ajax():
+    if request:
         request.session['note'] = request.POST.get('note')
         request.session['order'] = request.POST.get('orders')
         # if request.session['order'] is not None:
