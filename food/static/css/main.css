@@ -196,7 +196,7 @@
 
 /* ---------------------------------------About preview */
 .about-preview {
-    height: 40vh;
+    height: 29vh;
     width: 100%;
     overflow: hidden;
     position: relative;
@@ -264,6 +264,9 @@
     box-shadow: inset 0px 0px 6px 6px rgba(70, 70, 70, 0.12);
     border-radius: 6px;
 }
+.experience-container .menu-card h3 {
+    font-size: 1.3rem;
+}
 .experience-container .menu-card .imgBx {
     max-width: 150px;
     flex: 0 0 150px ;
@@ -293,13 +296,13 @@
 
 /* -----------------------reviews section */
 .review {
-    height: 60vh;
+    height: 43vh;
     width: 100%;
     overflow: hidden;
     position: relative;
     
 }
-.review-img {
+/* .review-img {
     display: flex;
     justify-content: center;
 }
@@ -310,7 +313,7 @@
     position: inherit;
     justify-content: center;
     margin: 0px 35px 0px 35px;
-}
+} */
 
 .review-content {
     display: block;
@@ -503,7 +506,9 @@ flex-direction: column;
     }
  
 }
-
+.for-hero-section {
+    height: 40vh;
+}
 
 
 
