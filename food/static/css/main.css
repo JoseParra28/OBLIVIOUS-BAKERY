@@ -396,6 +396,9 @@ li {
     .login-form-section{
         left: 7%;
     }
+    .form-hero-img img {
+        background-image: url(/food/static/images/blind-fold.jpg);
+    }
 
 }
 @media(max-width: 400px){
