@@ -66,6 +66,8 @@ function removeItem(n){
 //     })
 // }
 
+let note = document.querySelector('#message');
+
 function order(){
     let msg = note.value;
     let orders = localStorage.getItem('orders');
