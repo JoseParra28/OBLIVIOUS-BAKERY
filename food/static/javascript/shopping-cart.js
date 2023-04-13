@@ -43,29 +43,6 @@ function removeItem(n){
     
 }
 
-
-// let note = document.querySelector('#message');
-
-// function order(){
-//     let msg = note.value;
-//     let orders = localStorage.getItem('orders')
-//     let total = localStorage.getItem('total')
-//     let ur = 'order-list.html';
-//     let orderData = {};
-//     orderData['orders'] = orders;
-//     orderData['note'] = msg;
-//     orderData['total'] = total;
-//     $.ajax({
-//         url: ur,
-//         type: "POST",
-//         data: orderData,
-//         success: function (data){
-//             window.location.replace('susscess.html')
-//             localStorage.setItem('orders', JSON.stringify([]));
-//         }
-//     })
-// }
-
 let note = document.querySelector('#message');
 
 function order(){
