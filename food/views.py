@@ -85,23 +85,23 @@ def donut(request):
 @csrf_exempt
 def order(request):
     request.session.set_expiry(0)
-    if request:
+    if request.is_ajax():
         request.session['note'] = request.POST.get('note')
         request.session['order'] = request.POST.get('orders')
-        if request.session['order'] is not None:
-            orders = json.loads(request.session['order'])
-        request.session['total'] = request.POST.get('total')
-        if request.user.is_authenticated:
-            order = Order(customer=request.user, number=randomOrderNumber(6), receipt=float(request.session['total']), notes=request.session['note'])
-            order.save()
-            for article in orders:
-                item = Item(
-                    order=order,
-                    name=article[0],
-                    price=float("2"),
-                    size=article[1]
-                )
-                item.save()       
+        # if request.session['order'] is not None:
+        #     orders = json.loads(request.session['order'])
+        # request.session['total'] = request.POST.get('total')
+        # if request.user.is_authenticated:
+        #     order = Order(customer=request.user, number=randomOrderNumber(6), receipt=float(request.session['total']), notes=request.session['note'])
+        #     order.save()
+        #     for article in orders:
+        #         item = Item(
+        #             order=order,
+        #             name=article[0],
+        #             price=float("2"),
+        #             size=article[1]
+        #         )
+        #         item.save()       
     ctx = {'active_link': 'order-list'}
     return render(request, "food/order-list.html", ctx)
 
