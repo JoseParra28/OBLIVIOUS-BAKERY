@@ -165,6 +165,13 @@
         }  
         
       }
+      @media screen and (max-width: 967px) {
+        a.site-logo {
+            margin-left: -23;
+        }
+      }
+
+     
   
 /* ---------------------------Hero section */
 .orders-container {
@@ -240,11 +247,6 @@
     display: flex;
    
 }
-.experience-info p {
-    margin-left: 2%;
-    font-weight: 200;
-    font-size: 1.5rem;
-}
 .experience-container {
     position: relative;
     display: flex;
@@ -281,13 +283,13 @@
     }
     @media(max-width: 991px){
         .experience-container .menu-card  {
-            width: 27;
+            width: auto;
         }
         .experience-container .menu-card .imgBx {
             max-width: 8vh;
         }
     }
-   
+  
 
 /* -----------------------reviews section */
 .review {
