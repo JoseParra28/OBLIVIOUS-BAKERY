@@ -87,7 +87,21 @@ def order(request):
     request.session.set_expiry(0)
     if request:
         request.session['note'] = request.POST.get('note')
-        request.session['order'] = request.POST.get('orders')      
+        request.session['order'] = request.POST.get('orders')
+        # if request.session['order'] is not None:
+        #     orders = json.loads(request.session['order'])
+        request.session['total'] = request.POST.get('total')
+        if request.user.is_authenticated:
+            order = Order(customer=request.user, number=randomOrderNumber(6), receipt=float(request.session['total']), notes=request.session['note'])
+            order.save()
+            for article in orders:
+                item = Item(
+                    order=order,
+                    name=article[0],
+                    price=float("2"),
+                    size=article[1]
+                )
+                item.save()       
     ctx = {'active_link': 'order-list'}
     return render(request, "food/order-list.html", ctx)
 
@@ -107,7 +121,6 @@ def signup(request):
         if form.is_valid():
             form.save()
             return redirect('index')
-            NewUserForm()
         else:
             ctx['form'] = form
     else:
