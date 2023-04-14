@@ -8,21 +8,8 @@
     position: relative;
     
 }
-.menu-img {
-    display: flex;
-    justify-content: center;
-}
-.menu-img img {
-    height: 80%;
-    width: 80%;
-    background-repeat: no-repeat;
-    position: inherit;
-    justify-content: center;
-    margin: 0px 35px 0px 35px;
-}
-
 .menu-content {
-    display: block;
+    display: contents;
     position: absolute;
     margin: 4%;
     padding-right: 40%;
