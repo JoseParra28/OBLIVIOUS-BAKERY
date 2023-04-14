@@ -30,7 +30,7 @@
     border-radius: 10px;
 }
 .form-section p {
-    font-size: 4rem;
+    font-size: 0.3rem;
 }
 li {
     font-size: 1rem;
@@ -64,7 +64,8 @@ li {
 }
 @media(max-width: 400px){
     .signup-container {
-        width: 53vh; 
+        width: 59vh; 
+        left: -3%;
     }
     .login-form-section{
         left: 0%;
@@ -73,6 +74,11 @@ li {
     .signup-form-section h3 {
     font-size: 1rem;
 }
+.form-blur h3 {
+    font-size: 1rem;
+    
+}
+
 
 }
 
