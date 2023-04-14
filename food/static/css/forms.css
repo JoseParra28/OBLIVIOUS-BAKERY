@@ -31,11 +31,25 @@
 li {
     font-size: 1rem;
 }
-.form-group-logout small{
-    font-size: 0.5rem;
+.form-group-logout small ul li{
+    font-size: 0.6rem;
     
 }
+.text-center a li {
+    background-image: linear-gradient(45deg, #782b25 0%, #a23930 0%, #872b20 21%, #d9402f 52%, #61111f 78%, #6a1818 100%);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color:transparent;
+    text-decoration: none;
+}
 /* ---------------------------------login form section */
+.login-form-hero-img img {
+    width: 100%;
+    height: 92vh;
+    position: relative;
+    background-repeat: no-repeat;
+}
 .login-form-section {
     top: 17%;
     position: absolute;
@@ -76,13 +90,16 @@ li {
 }
 .form-blur h3 {
     font-size: 1rem;
-    
 }
-
+.p-5-login {
+    height: 42vh;
+    left: 19%;
+}
+.login-form-hero-img img {
+    height: 62vh;
 
 }
-
-
+}
 /* ----------------------------add item form */
 .add-review {
     position: relative;
