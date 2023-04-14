@@ -118,8 +118,6 @@
       } 
       /* mobile breakpoint start */
       @media screen and (max-width: 967px) {
-       
-        /* navbar css for mobile start */
         .nav-toggler{
           display: block;
         }
@@ -320,76 +318,6 @@
 .orders {
     padding-top: 10%;
 }
-/* ------------------------------ sign up form section  */
-.form-hero-img img {
-    width: 100%;
-    height: 92vh;
-    position: relative;
-    background-repeat: no-repeat;
-}
-.form-blur {
-    background-color: rgba(225, 220, 220, 0.4);
-    border-radius: 20px;
-    backdrop-filter: blur(2px);
-}
-.signup-form-section {
-    top: 17%;
-    position: absolute;
-    left: 30%;
-}
-
-.signup-container {
-    width: 100vh;
-    position: absolute;
-    left: 24%;
-    top: 11%;
-}
-
-#id_username, #id_email, #id_first_name, #id_password1, #id_password2{
-    border-radius: 10px;
-}
-.form-section p {
-    font-size: 4rem;
-}
-li {
-    font-size: 1rem;
-}
-.login-form-section {
-    top: 17%;
-    position: absolute;
-    left: 22%;
-}
-.p-5-login {
-    position: relative;
-    width: 100vh;
-    height: 60vh;
-    padding: 10%;
-}
-.form-group{
-    padding: 3%;
-}
-.form-group{
-    padding: 2%;
-}
-@media(max-width: 992px){
-    .signup-container {
-        left: 5%;  
-    }
-    .login-form-section{
-        left: 7%;
-    }
-
-}
-@media(max-width: 400px){
-    .signup-container {
-        width: 53vh; 
-    }
-    .login-form-section{
-        left: 0%;
-        width: 40vh;
-    }
-
-}
 /* -------------------------orders page */
 .orders-container-fluid{
 padding: 9%;
@@ -402,24 +330,6 @@ padding: 9%;
 .susscess-msg, p {
     top: 30%;
     display: flex;
-}
-#cancel-text {
-    top: 50%;
-    padding: 16%;
-}
-/* ----------------------------add item form */
-.add-review {
-    position: relative;
-    left: -40vh;
-    top: 30vh;
-}
-.add-item-form{
-    top: 43vh;
-    position: absolute;
-    display: flex;
-}
-#id_name {
-    color: red;
 }
 /* --------------------------------------------footer */
 .footer__container {
