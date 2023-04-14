@@ -1,18 +1,18 @@
 
 /* ---------------------------------------About preview */
-.about-preview {
-    height: 47vh;
+.menu-preview {
+    height: 58vh;
     width: 100%;
-    top: 15vh;
+    top: 3vh;
     overflow: hidden;
     position: relative;
     
 }
-.about-img {
+.menu-img {
     display: flex;
     justify-content: center;
 }
-.about-img img {
+.menu-img img {
     height: 80%;
     width: 80%;
     background-repeat: no-repeat;
@@ -21,7 +21,7 @@
     margin: 0px 35px 0px 35px;
 }
 
-.about-content {
+.menu-content {
     display: block;
     position: absolute;
     margin: 4%;

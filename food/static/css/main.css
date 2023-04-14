@@ -57,11 +57,7 @@
     align-items: center;
   }
   a.site-logo {
-    font-size: 26px;
-    font-weight: 800;
-    text-transform: uppercase;
-    text-decoration: none;
-    margin-left: 10%;
+    margin-left: -5%;
   }
   .site-navbar ul {
     margin: 0;
@@ -165,9 +161,9 @@
         }  
         
       }
-      @media screen and (max-width: 967px) {
+      @media screen and (max-width: 375px) {
         a.site-logo {
-            margin-left: -23;
+            margin-right: 41% ;
         }
       }
 
@@ -196,7 +192,7 @@
 
 /* ---------------------------------------About preview */
 .about-preview {
-    height: 29vh;
+    height: 32vh;
     width: 100%;
     overflow: hidden;
     position: relative;
@@ -234,7 +230,7 @@
         height: 18vh;
     }
     .about-preview {
-        height: 30vh;
+        height: 44vh;
     }
         
 }
@@ -296,25 +292,12 @@
 
 /* -----------------------reviews section */
 .review {
-    height: 43vh;
+    height: 50vh;
     width: 100%;
     overflow: hidden;
     position: relative;
     
 }
-/* .review-img {
-    display: flex;
-    justify-content: center;
-}
-.review-img img {
-    height: 80%;
-    width: 80%;
-    background-repeat: no-repeat;
-    position: inherit;
-    justify-content: center;
-    margin: 0px 35px 0px 35px;
-} */
-
 .review-content {
     display: block;
     margin: 4%;
@@ -327,10 +310,9 @@
 }
 @media screen and (max-width: 450px) {
     .review {
-        height: 35vh;
+        height: 51vh;
     }
 }
-
 /* ---------------------------------orders status */
 .orders-img img {
     width: 100%;
