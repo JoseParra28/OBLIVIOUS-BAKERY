@@ -115,10 +115,7 @@
       }
       .nav-toggler.toggler-open span:after {
         transform: translateY(-3px) rotate(-45deg);
-      }
-      /* nav-toggler css start */
-      
-      
+      } 
       /* mobile breakpoint start */
       @media screen and (max-width: 967px) {
        
@@ -166,9 +163,6 @@
             margin-right: 41% ;
         }
       }
-
-     
-  
 /* ---------------------------Hero section */
 .orders-container {
     position: absolute;
