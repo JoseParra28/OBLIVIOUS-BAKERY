@@ -10,21 +10,21 @@
     border-radius: 20px;
     backdrop-filter: blur(2px);
 }
-.signup-container {
+.signup-form-section {
     top: 17%;
     position: absolute;
     left: 30%;
 }
-.signup-container h3 {
+.signup-form-section h3 {
     font-size: 1rem;
 }
 
-/* .signup-container {
+.signup-container {
     width: 100vh;
     position: absolute;
     left: 24%;
     top: 11%;
-} */
+}
 
 #id_username, #id_email, #id_first_name, #id_password1, #id_password2{
     border-radius: 10px;
@@ -70,9 +70,9 @@ li {
         left: 0%;
         width: 40vh;
     }
-    .signup-container h3 {
-        font-size: 1rem;
-    }
+    .signup-form-section h3 {
+    font-size: 1rem;
+}
 
 }
 
