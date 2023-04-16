@@ -11,9 +11,10 @@
     backdrop-filter: blur(2px);
 }
 .signup-form-section {
-    top: 17%;
     position: absolute;
-    left: 30%;
+    top: 10vh;
+    left: 31vh;
+    padding: 10%;
 }
 .signup-form-section h3 {
     font-size: 1rem;
@@ -68,23 +69,22 @@ li {
 .form-group{
     padding: 2%;
 }
-/* @media(max-width: 992px){
+@media(max-width: 992px){
     .signup-container {
         left: 5%;  
     }
-    .login-form-section{
-        left: 7%;
+    .p-5-login{
+        left: 0%;
     }
 
-} */
-/* @media(max-width: 440px){
+}
+@media(max-width: 440px){
     .signup-container {
         width: 59vh; 
         left: -3%;
     }
     .login-form-section{
         left: 0%;
-        width: 40vh;
     }
     .signup-form-section h3 {
     font-size: 1rem;
@@ -92,15 +92,14 @@ li {
 .form-blur h3 {
     font-size: 1rem;
 }
-.p-5-login {
+/* .p-5-login {
     height: 42vh;
     left: 19%;
-}
+} */
 .login-form-hero-img img {
     height: 62vh;
-
 }
-} */
+}
 /* ----------------------------add item form */
 .add-review {
     position: relative;
