@@ -74,7 +74,7 @@ li {
         left: 5%;  
     }
     .p-5-login{
-        left: 0%;
+        left: 31vh;
     }
 
 }
@@ -83,19 +83,16 @@ li {
         width: 59vh; 
         left: -3%;
     }
-    .login-form-section{
-        left: 0%;
-    }
     .signup-form-section h3 {
     font-size: 1rem;
 }
 .form-blur h3 {
     font-size: 1rem;
 }
-/* .p-5-login {
+.p-5-login {
     height: 42vh;
-    left: 19%;
-} */
+    left: 0vh;
+}
 .login-form-hero-img img {
     height: 62vh;
 }
