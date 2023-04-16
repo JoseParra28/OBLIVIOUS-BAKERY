@@ -23,6 +23,15 @@
 
 * [Technologies and Languages Used](#technologies-used)
   * [Database design](#database-design)
+  * [Models](#models)
+
+* [Agile development](#agile-development)
+  * [GitHub projects](#github-projects)
+  * [GitHub issues](#github-issues)
+* [Testing](#testing)
+* [Deploiment](#deploiment)
+  * [Customized deployment](#customized-deployment )
+* [Credits](#credits)
 
 ---
 
@@ -47,13 +56,13 @@ dark-gray for my font color was used to keep it simple but appealing.
 
 I used [coolors.co](https://coolors.co/) to generate my colour palette.
 
-<img src="food/static/css/readme-img/color-pallet.jpg" alt="color-pallete">
+<img src="food/static/images/readme-img/color-pallet.jpg" alt="color-pallete">
 
 I've used CSS :root variables to easily update the global colour scheme by changing only one value, instead of everywhere in the CSS file.
 I have also set the values of h1, h2, h3, p, and button values at the beginning of the main css page to avoid rewriting them.
 I created 4 css files to keep the code more organised. These being MAIN, COLORS, MENU, FORMS.css.
 
-<img src="food/static/css/readme-img/root.jpg" alt="color-root">
+<img src="food/static/images/readme-img/root.jpg" alt="color-root">
 
 ## Typography
 
@@ -62,8 +71,11 @@ I created 4 css files to keep the code more organised. These being MAIN, COLORS,
 - Font awsome for icons
 
 ## Images
+
 ### Logo
+
 Site's logo was created by myself using photoshop.
+
 <img src="food/static/images/oblivious-logo.jpg" alt="logo">
 
 Images were carefully selected to reflect the purpose of this site. 
@@ -161,6 +173,179 @@ kfkfkffk
 
 # Database Design
 I created an entity relationship diagram using Diagrams.net. This helped me to visualize the relationships between my data structures and made the development process easier as I had everything mapped out in front of me for reference to avoid having to reference each models.py file individually.
+
+## Models
+
+   - Pie
+   - Cake
+   - Donut
+
+| PK      | ID(unique)  | Type       |
+| --------| ----------- | -----      |
+| FK      |   name      | ChardField |
+|         |   price_m   | ChardField |
+|         |   Price_l   | ChardField |
+|         |   p_image   | URLField   |
+
+   - Order
+
+| PK      | ID(unique)  | Type         |
+| --------| ----------- | -----        |
+| FK      |   Customer  | ForeignKey   |
+|         |   number    | ChardField   |
+|         |   receipt   | DecimalField |
+|         |   date      | DateTimeField|
+|         |   notes     | TextField    | 
+
+   - Item
+
+| PK      | ID(unique)  | Type         |
+| --------| ----------- | -----        |
+| FK      |   order     | ForeignKey   |
+|         |   name      | ChardField   |
+|         |   price     | DecimalField |
+|         |   size      | DateTimeField|
+
+   - Itemm
+
+| PK      | ID(unique)  | Type         |
+| --------| ----------- | -----        |
+| FK      |   name      | Chardfield   |
+|         |   done      | BooleanField |
+
+
+# Agile development
+
+## GitHub Projects
+GitHub Projects served as an Agile tool for this project. It isn't a specialized tool, but with the right tags and project creation/issue assignments, it was made to work.
+
+Through it, user stories were used to map out the development progress of the project using the basic Kanban board. It helped me to see the backlog of work I needed to complete and move tasks across as I worked on them before testing and signing off to finish them.
+
+## GitHub issues
+GitHub Issues served as an another Agile tool. There, I used my own User Story Template to manage user stories
+
+# Testing
+
+<details>
+<summary>HTML</summary>
+I have used the recommended HTML W3C Validator to validate all of my HTML files.
+
+As my project uses Jinja syntax, such as {% for loops %}, {% url 'home' %}, and {{ variable|filter }} it will not validate properly if I copy and paste into the HTML validator straight from my source files.
+
+Usually in order to properly validate these types of files, it's recommended to validate by uri from the deployed Heroku pages.
+
+Unfortunately, nearly all of the pages on this site require a user to be logged-in and authenticated, and will not work using this method, due to the fact that the HTML Validator (W3C) doesn't have access to login to the pages.
+
+In order to properly validate my HTML pages with Jinja syntax for authenticated pages, I followed these steps:
+
+- Navigate to the deployed pages which require authentication
+- Right-click anywhere on the page, and select View Page Source (usually CTRL+U or ⌘+U on Mac).
+- This will display the entire "compiled" code, without any Jinja syntax.
+- Copy everything, and use the validate by input method.
+- Repeat this process for every page that requires a user to be logged-in/authenticated.
+
+</details>
+
+<details>
+<summary>CSS</summary>
+
+
+</details>
+
+<details>
+<summary>Javascript</summary>
+
+
+</details>
+
+<details>
+<summary>Python</summary>
+
+
+</details>
+
+# Deploiment
+
+[Heroku live deploiment](https://oblivious-bakery.herokuapp.com/)
+
+## ElephantSQL Database
+
+### This project uses [PostgreSQL](https://www.postgresql.org/) for the PostgreSQL Database.
+
+To obtain your own Postgres Database, sign-up with your GitHub account, then follow these steps:
+
+- Click Create New Instance to start a new database.
+- Provide a name (this is commonly the name of the project: tribe).
+- Select the Tiny Turtle (Free) plan.
+- You can leave the Tags blank.
+- Select the Region and Data Center closest to you.
+- Once created, click on the new database name, where you can view the database URL and Password.
+
+## Cloudinary API
+
+### This project uses the Cloudinary API to store media assets online, due to the fact that Heroku doesn't persist this type of data.
+
+To obtain your own [Cloudinary API](https://cloudinary.com/) key, create an account and log in.
+
+- For Primary interest, you can choose Programmable Media for image and video API.
+- Optional: edit your assigned cloud name to something more memorable.
+- On your Cloudinary Dashboard, you can copy your API Environment Variable.
+- Be sure to remove the CLOUDINARY_URL= as part of the API value; this is the key.
+
+## Heroku Deployment
+This project uses [Heroku](https://dashboard.heroku.com), a platform as a service (PaaS) that enables developers to build, run, and operate applications entirely in the cloud.
+
+Deployment steps are as follows, after account setup:
+
+- Select New in the top-right corner of your Heroku Dashboard, and select Create new app from the dropdown menu.
+- Your app name must be unique, and then choose a region closest to you (EU or USA), and finally, select Create App.
+- From the new app Settings, click Reveal Config Vars, and set your environment variables.
+- Key	Value
+   - CLOUDINARY_URL	insert your own Cloudinary API key here
+   - DATABASE_URL	insert your own ElephantSQL database URL here
+   - DISABLE_COLLECTSTATIC	1 (this is temporary, and can be removed for the final deployment)
+   - SECRET_KEY	this can be any random secret key
+
+## Heroku needs two additional files in order to deploy properly, and in my case I needed to create runtime.txt and install an compatible vertion of Python.
+
+   - requirements.txt
+   - Procfile
+   - runtime.txt
+
+You can install this project's requirements (where applicable) using:
+
+   - pip3 install -r requirements.txt
+If you have your own packages that have been installed, then the requirements file needs updated using:
+
+   - pip3 freeze --local > requirements.txt
+The Procfile can be created with the following command:
+
+   - echo web: gunicorn app_name.wsgi > Procfile
+   - replace app_name with the name of your primary Django app name; the folder where settings.py is located
+For Heroku deployment, follow these steps to connect your own GitHub repository to the newly created app:
+
+Either:
+
+   - Select Automatic Deployment from the Heroku app.
+Or:
+
+   - In the Terminal/CLI, connect to Heroku using this command: heroku login -i
+   - Set the remote for Heroku: heroku git:remote -a app_name (replace app_name with your app name)
+   - After performing the standard Git add, commit, and push to GitHub, you can now type:
+      - git push heroku main
+The project should now be connected and deployed to Heroku!   
+
+
+# Customized deployment 
+I have follow the steps as above to deploy my app however, I did run with a couple of issues while doing so. 
+I contacted tutor assistant and recived much appreciated support from one of the tutors. All i needed was to update some vertion of my installed files. After doing this, the app was up and running.
+
+# Credits
+
+
+
+
+
 
 
 
