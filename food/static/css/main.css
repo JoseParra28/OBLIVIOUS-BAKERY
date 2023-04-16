@@ -30,6 +30,7 @@
           font-family: Lato, sans-serif;
           font-size: 1rem;
           padding: 1%;
+          text-transform: capitalize;
           background-image: linear-gradient(45deg, #782b25 0%, #a23930 0%, #872b20 21%, #d9402f 52%, #61111f 78%, #6a1818 100%);
           -webkit-background-clip: text;
           -moz-background-clip: text;
