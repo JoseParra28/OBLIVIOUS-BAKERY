@@ -33,4 +33,8 @@
     border-radius: 10% 5%;
     height: 200px;
 }
+/* -------------------------- menu cards jump button */
+.jump-btn {
+    position: relative;
+}
  

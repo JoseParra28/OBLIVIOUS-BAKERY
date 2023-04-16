@@ -23,7 +23,7 @@
     width: 100vh;
     position: absolute;
     left: 24%;
-    top: 11%;
+    top: 20%;
 }
 
 #id_username, #id_email, #id_first_name, #id_password1, #id_password2{
@@ -80,8 +80,8 @@ li {
 }
 @media(max-width: 440px){
     .signup-container {
-        width: 59vh; 
-        left: -3%;
+        width: 42vh; 
+        left: 0%;
     }
     .signup-form-section h3 {
     font-size: 1rem;
