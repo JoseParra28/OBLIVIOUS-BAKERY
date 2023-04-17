@@ -240,7 +240,8 @@ After submiting their order users are redirected to the susscess page. Here they
   - Review likes
 
 # Accessibly 
-kfkfkffk
+I created the website simple enough so that any user is able to see, read and navigate through the website
+After passing through the Lighthouse in devtool the font choose is clearly readable.
 
 # Technologies and Languages Used
 - [HTML](https://en.wikipedia.org/wiki/HTML)used for the main site content.
