@@ -162,6 +162,12 @@
             margin-right: 41% ;
         }
       }
+      .login {
+color: red;
+      }
+      .user-name {
+color: red;
+      }
 /* ---------------------------Hero section */
 .orders-container {
     position: absolute;
