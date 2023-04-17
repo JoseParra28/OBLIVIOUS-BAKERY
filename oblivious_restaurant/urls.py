@@ -35,6 +35,7 @@ urlpatterns = [
     path('edit/<itemm_id>', views.edit_item, name="edit-item-page"),
     path('delete/<itemm_id>', views.delete_item, name="delete-item-page"),
     path('index.html', views.index, name="index"),
+    path('accounts', include('allauth.urls')),
     path('pie.html', views.pie, name='pie_page'),
     
 ]
