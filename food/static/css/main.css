@@ -229,6 +229,9 @@
     text-align: center;
     padding: 1%;
 }
+.about-btn {
+    
+}
 @media screen and (max-width: 950px) {
     .about-img img {
         height: 35vh ;
