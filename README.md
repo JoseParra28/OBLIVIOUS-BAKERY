@@ -31,6 +31,7 @@
 * [Testing](#testing)
 * [Deploiment](#deploiment)
   * [Customized deployment](#customized-deployment )
+* [Reference material](#reference-material)
 * [Credits](#credits)
 
 ---
@@ -79,13 +80,18 @@ Site's logo was created by myself using photoshop.
 <img src="food/static/images/oblivious-logo.jpg" alt="logo">
 
 Images were carefully selected to reflect the purpose of this site. 
-menu images were attached to it's respective model and item. I have used [Cloudinary](https://cloudinary.com/ip/gr-sea-gg-brand-home-base?utm_source=google&utm_medium=search&utm_campaign=goog_selfserve_brand_wk22_replicate_core_branded_keyword&utm_term=1329&campaignid=17601148700&adgroupid=141182782954&keyword=cloudinary&device=c&matchtype=e&adposition=&gclid=CjwKCAjwue6hBhBVEiwA9YTx8P-hLvbb_KcqF4Bpd047hJ-hJhBm6HgQxVqJVLussoHWF4oyXnSv8BoCFpYQAvD_BwE) to add custom images to the each item.
+menu images were attached to it's respective model and item. I have used [Cloudinary](https://cloudinary.com/) to add custom images to the each item.
 
 ## User Stories
 
 ### New Site Users
 - As a new site user, I would like to clearly see the site's purpose, so that I can decide whether or not to sign up. (MUST HAVE)
 - As a new site user, I would like to sign up for the site and create an account, so that I can create my profile and start ordering from the site. (MUST HAVE)
+ <img src="food/static/images/readme-img/user-stories.png" alt="user-stories">
+
+ - Issues
+
+ <img src="food/static/images/readme-img/issues.png" alt="user-stories">
 
 ### Registered Users
 - As a registered user, I would like to log in to my account, so that I can access the site. (MUST HAVE)
@@ -339,17 +345,36 @@ In order to properly validate my HTML pages with Jinja syntax for authenticated 
 <details>
 <summary>CSS</summary>
 
+- Tested the code returning no errors
+
+  <img src="food/static/images/readme-img/css-test.jpg" alt="css-test">
 
 </details>
 
 <details>
 <summary>Javascript</summary>
 
-
+- Tested the code returning 0 errors.
+- There are 11 funtions in this file.
+- The most complex function has a cyclomatic complexity value of 2 while the median is 1.
+- Ran the tests on [JShint](https://jshint.com/)
 </details>
 
 <details>
 <summary>Python</summary>
+
+- Tested the my written code in CodeInstitute CI Python linter and found zero errors.
+
+   - Views
+
+   <img src="food/static/images/readme-img/views-testing.png" alt="views-test">
+
+   - Models
+
+
+   <img src="food/static/images/readme-img/models-testing.png" alt="models-test">
+   
+
 
 
 </details>
@@ -429,6 +454,9 @@ The project should now be connected and deployed to Heroku!
 # Customized deployment 
 I have follow the steps as above to deploy my app however, I did run with a couple of issues while doing so. 
 I contacted tutor assistant and recived much appreciated support from one of the tutors. All i needed was to update some vertion of my installed files. After doing this, the app was up and running.
+
+- Reference Material
+Used Django decumentation to help me through the building of this site, as well as Stack overflow to help me solve some small errors and issues i came across
 
 # Credits
 

@@ -39,10 +39,3 @@ if (total == null || total === Number){
 
 let trolley = document.querySelector('#trolley');
 trolley.innerHTML = orders.length;
-
-
-
-
-
-
-
