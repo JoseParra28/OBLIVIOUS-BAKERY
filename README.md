@@ -186,37 +186,51 @@ This site was created specifically for an intuitive navigation. With clear pictu
   - Landing Page
 
 This is the page a user lands on when arriving at the site for the first time or before they've logged in if they don't have an active session. It welcomes them to the site and gives them a brief description of the company as well as staff. If the user is logged in they will get an indication that they are by having the logout button in the navigation bar.
-<img src="food/static/css/readme-img/color-pallet.jpg" alt="color-pallete">
+<img src="food/static/images/readme-img/hero.jpg" alt="success-page-phone">
 
   -  About section
 The about section is found in the home page, desided to do this instead of creating a new page all together.
+<img src="food/static/images/readme-img/about.jpg" alt="success-page-phone">
 
   - Review section 
 The review section can be found right under the About section, this is where users can write a review, edit and delete. Only authenticated can write revies, not account holders with be able to see the review but not who wrote them to protect their identity.
+<img src="food/static/images/readme-img/reviews.jpg" alt="success-page-phone">
 
   - Meet the team section
 This is where users can meet the team, and read a little bit about their background.  
+<img src="food/static/images/readme-img/team.jpg" alt="success-page-phone">
 
   - Footer
 The footer contains future links such as career etc. It will also contain contact information.
+<img src="food/static/images/readme-img/footer.jpg" alt="success-page-phone">
 
   - Menu
 The menu contains a brief description of the company’s menu as well as manu cards with the description of the item and a button to access the add items page. 
+- Menu preview
+<img src="food/static/images/readme-img/menu-prev.jpg" alt="success-page-phone">
 
   - Cakes, Pies, Donuts
 With a model for each item users can add the items of their choice and the size of their choice,they can browse through the site and add the items they want to the basket-preview and they will also be able to remove the item if they wish. The `check out` button with brinf them to the submit order page. 
+<img src="food/static/images/readme-img/menu.jpg" alt="success-page-phone">
 
   - Basket 
 Here users can see what they have added and what they will be purchasing, they can also delete any item that they added if they change their mind. They can also leave an note to customise their order a bit more.
+<img src="food/static/images/readme-img/basket.jpg" alt="success-page-phone">
+ 
+- Order summary ready to check out.
+<img src="food/static/images/readme-img/summary.jpg" alt="success-page-phone">
 
   - Login
 Users can login if they have an accound with us, if not, they will have a button to sign up that will redirect them to signup form.
+<img src="food/static/images/readme-img/login.jpg" alt="success-page-phone">
 
   - Signup
 User can create an account if they don't have one with us. They need a username, e-mail, name, password and rewrite password. The form was done with Django's NewUserForm so that that they enter a strong password. Their data will be stored in the database.
+<img src="food/static/images/readme-img/signup.jpg" alt="success-page-phone">
 
   - Success page
 After submiting their order users are redirected to the susscess page. Here they can either go back home of logout.
+<img src="food/static/images/readme-img/success.jpg" alt="success-page-phone">
 
 # Future implementations
 
