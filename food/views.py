@@ -55,6 +55,7 @@ def edit_item(request, itemm_id):
 def delete_item(request, itemm_id):
     item = get_object_or_404(Itemm, id=itemm_id)
     item.delete()
+    messages.info(request, 'Your review has been deleted.')
     return redirect('index')    
 
 
