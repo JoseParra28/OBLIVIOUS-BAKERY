@@ -97,9 +97,84 @@ menu images were attached to it's respective model and item. I have used [Cloudi
 
 # Wireframes
 
+### Click the arrow to drop down the menu
+
 <details>
-<summary> drodm</summary>
-<img src="food/static/images/readme-img/root.jpg" alt="color-root">
+<summary>Landing page</summary>
+
+- Desktop
+
+<img src="food/static/images/readme-img/wireframe-land-desk.jpg" alt="landing-page-wire">
+
+- Mobile and tablet
+
+<img src="food/static/images/readme-img/wireframe-phone.jpg" alt="landing-page-wire-phone">
+
+
+</details>
+
+<details>
+<summary>Menu description page</summary>
+
+- Desktop
+
+<img src="food/static/images/readme-img/wireframe-menu-prev-desk.jpg" alt="preview-page-wire">
+
+- Mobile and tablet
+
+<img src="food/static/images/readme-img/wireframe-menu-prev.jpg" alt="preview-page-wire">
+
+</details>
+
+<details>
+<summary>Menu page</summary>
+
+- Desktop
+
+<img src="food/static/images/readme-img/wireframe-menu-desk.jpg" alt="menu-page">
+
+- Mobile and tablet
+
+<img src="food/static/images/readme-img/wireframe-menu-phone.jpg" alt="menu-page-phone">
+
+</details>
+
+<details>
+<summary>Forms page</summary>
+
+- Desktop
+
+<img src="food/static/images/readme-img/wireframe-forms-desk.jpg" alt="forms-page">
+
+- Mobile and tablet
+
+<img src="food/static/images/readme-img/wireframe-forms-phone.jpg" alt="forms-pahe-phone">
+
+</details>
+
+<details>
+<summary>Order summary page</summary>
+
+- Desktop
+
+<img src="food/static/images/readme-img/wireframe-submit-desk.jpg" alt="summary-page">
+
+- Mobile and tablet
+
+<img src="food/static/images/readme-img/wireframe-submit-phone.jpg" alt="summary-page-phone">
+
+</details>
+
+<details>
+<summary>Success page</summary>
+
+- Desktop
+
+<img src="food/static/images/readme-img/success-desk.jpg" alt="success-page">
+
+- Mobile and tablet
+
+<img src="food/static/images/readme-img/success-phone.jpg" alt="success-page-phone">
 
 </details>
 
