@@ -1,1 +1,1 @@
-web: gunicorn oblivious_restaurant.wsgi
+web:gunicorn oblivious_restaurant.wsgi
