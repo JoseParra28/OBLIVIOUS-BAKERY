@@ -254,7 +254,7 @@ After passing through the Lighthouse in devtool the font choose is clearly reada
 - [CSS](https://en.wikipedia.org/wiki/CSS) used for the main site design and layout.
 - [CSS :root](https://www.w3schools.com/css/css3_variables.asp)variables used for reusable styles throughout the site.
 - [Bootstrap](https://getbootstrap.com/) used as the front-end CSS framework for modern responsiveness and pre-built components.
-- [Javascript](https://www.javascript.com/) used for user interaction on the site for automatically closing Django Messages and to handle the notification dropdown and notification delete functions.
+- [Javascript](https://www.javascript.com/) used for user interaction on the site to handle the notification dropdown and notification delete functions, menu cart and orders.
 - [Python](https://www.python.org/) used as the back-end programming language.
 - [Git](https://git-scm.com/) Git used for version control. (git add, git commit, git push)
 - [GitHub](https://github.com/) used for secure online code storage.
@@ -264,8 +264,8 @@ After passing through the Lighthouse in devtool the font choose is clearly reada
 - [ElephantSQL](https://www.elephantsql.com/) used as the Postgres database.
 - [Heroku](https://dashboard.heroku.com) used for hosting the deployed back-end site.
 - [Cloudinary](https://cloudinary.com/) used for online static file storage.
-- [Adobe Photoshop](https://www.adobe.com) to create the logo
-- [Lucidchart](https://www.lucidchart.com) used to create the database design
+- [Adobe Photoshop](https://www.adobe.com) used to create the logo
+- [Lucidchart](https://www.lucidchart.com) used to create the database design and the wireframes
 
 # Database Design
 I created an entity relationship diagram using Diagrams.net. This helped me to visualize the relationships between my data structures and made the development process easier as I had everything mapped out in front of me for reference to avoid having to reference each models.py file individually.
