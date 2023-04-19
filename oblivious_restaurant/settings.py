@@ -132,15 +132,13 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 
-# STATIC_URL = '/static/'
+STATIC_URL = '/static/'
 STATICFILE_STORAGE = 'cloudinary_storage.storage.StaticHashedCloudinaryStorage'
-# STATICFILE_DIRS = [os.path.join(BASE_DIR, 'static')]
+STATICFILE_DIRS = [os.path.join(BASE_DIR, 'static')]
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 MEDIA_URL = '/images/'
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
-
-# django_heroku.settings(locals())
 
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
