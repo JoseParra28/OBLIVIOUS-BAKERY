@@ -460,6 +460,10 @@ Used Django decumentation to help me through the building of this site, as well 
 
 # Credits
 
+- Add a review code is from Code Institute CodeStart follow along project
+- Sign in and sigh out form is Django documentations
+- Restaurant booking system models inspiration from [DarshanDev](https://www.youtube.com/@darshandev1754)
+
 
 
 
